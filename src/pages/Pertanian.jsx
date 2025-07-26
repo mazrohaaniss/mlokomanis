@@ -292,34 +292,129 @@ function Pertanian() {
         {activeTab === 'potensi' && (
           <div className="space-y-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-green-800 mb-4">Hasil Tani Unggulan Desa Duwet</h2>
+              <h2 className="text-3xl font-bold text-green-800 mb-4">Hasil Tani Unggulan</h2>
               <p className="text-gray-600 text-lg">Kekayaan alam yang melimpah dengan kualitas terbaik</p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {hasilTani.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-105"
-                  onClick={() => handleCardClick(item, index)}
-                >
-                  <div className="h-48 overflow-hidden">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-green-800 mb-2">{item.name}</h3>
-                    <p className="text-gray-600 text-sm mb-4">{item.description}</p>
-                    <div className="flex items-center text-green-600 font-semibold">
-                      <span className="text-sm">Lihat Menu Olahan</span>
-                      <ChevronRight className="w-4 h-4 ml-1" />
-                    </div>
+            {/* Grid Layout dengan 6 produk */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {/* Singkong */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-105"
+                   onClick={() => handleCardClick(hasilTani[0], 0)}>
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1590736969955-71cc94901144?w=400&h=300&fit=crop"
+                    alt="Singkong"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-green-800 mb-2">Singkong</h3>
+                  <p className="text-gray-600 text-sm mb-4">Hasil utama yang melimpah, menjadi bahan dasar berbagai olahan tradisional</p>
+                  <div className="flex items-center text-green-600 font-semibold">
+                    <span className="text-sm">Lihat Menu Olahan</span>
+                    <ChevronRight className="w-4 h-4 ml-1" />
                   </div>
                 </div>
-              ))}
+              </div>
+
+              {/* Kakao */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-105"
+                   onClick={() => handleCardClick(hasilTani[1], 1)}>
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1511381939415-e44015466834?w=400&h=300&fit=crop"
+                    alt="Kakao"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-green-800 mb-2">Kakao</h3>
+                  <p className="text-gray-600 text-sm mb-4">Kakao berkualitas tinggi yang menjadi ciri khas perkebunan desa</p>
+                  <div className="flex items-center text-green-600 font-semibold">
+                    <span className="text-sm">Lihat Menu Olahan</span>
+                    <ChevronRight className="w-4 h-4 ml-1" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Kacang Tanah */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-105"
+                   onClick={() => handleCardClick(hasilTani[2], 2)}>
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1589927986089-35812388d1a4?w=400&h=300&fit=crop"
+                    alt="Kacang Tanah"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-green-800 mb-2">Kacang Tanah</h3>
+                  <p className="text-gray-600 text-sm mb-4">Hasil utama yang melimpah, menjadi bahan dasar berbagai olahan tradisional</p>
+                  <div className="flex items-center text-green-600 font-semibold">
+                    <span className="text-sm">Lihat Menu Olahan</span>
+                    <ChevronRight className="w-4 h-4 ml-1" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Jagung */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer">
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=400&h=300&fit=crop"
+                    alt="Jagung"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-green-800 mb-2">Jagung</h3>
+                  <p className="text-gray-600 text-sm mb-4">Hasil pertanian melimpah yang serbaguna, menjadi komponen karbohidrat alami dalam olahan</p>
+                  <div className="flex items-center text-green-600 font-semibold">
+                    <span className="text-sm">Lihat Menu Olahan</span>
+                    <ChevronRight className="w-4 h-4 ml-1" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Padi */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-105"
+                   onClick={() => handleCardClick(hasilTani[3], 3)}>
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&h=300&fit=crop"
+                    alt="Padi"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-green-800 mb-2">Padi</h3>
+                  <p className="text-gray-600 text-sm mb-4">Makanan pokok dengan sistem irigasi tradisional yang berkelanjutan</p>
+                  <div className="flex items-center text-green-600 font-semibold">
+                    <span className="text-sm">Lihat Menu Olahan</span>
+                    <ChevronRight className="w-4 h-4 ml-1" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Kacang Panjang */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer">
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?w=400&h=300&fit=crop"
+                    alt="Kacang Panjang"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-green-800 mb-2">Kacang Panjang</h3>
+                  <p className="text-gray-600 text-sm mb-4">Sayuran hijau segar yang kaya nutrisi, menjadi bahan dasar berbagai olahan tradisional sehat</p>
+                  <div className="flex items-center text-green-600 font-semibold">
+                    <span className="text-sm">Lihat Menu Olahan</span>
+                    <ChevronRight className="w-4 h-4 ml-1" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         )}
