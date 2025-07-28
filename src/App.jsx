@@ -5,6 +5,8 @@ import Potensi from './pages/Potensi';
 import Proker from './pages/Proker';
 import Login from './pages/Login';
 import Pertanian from './pages/Pertanian';
+import InovasiGethukKakao from './pages/InovasiGethukKakao';
+import HasilProkerKami from './pages/HasilProkerKami';
 import PabrikTahu from './pages/PabrikTahu';
 import Karawitan from './pages/Karawitan';
 import Dashboard from './pages/admin/Dashboard';
@@ -65,6 +67,8 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/potensi" element={<Potensi potensiList={potensiList} />} />
         <Route path="/potensi/pertanian" element={<Pertanian />} />
+        <Route path="/potensi/InovasiGethukKakao" element={<InovasiGethukKakao />} />
+        <Route path="/potensi/HasilProkerKami" element={<HasilProkerKami />} />
         <Route path="/potensi/pabrik-tahu" element={<PabrikTahu />} />
         <Route path="/potensi/karawitan" element={<Karawitan />} />
         <Route path="/proker" element={<Proker prokerList={prokerList} />} />
