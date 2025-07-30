@@ -4,65 +4,34 @@ import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import { Link } from 'react-router-dom';
 
-// Komponen Konten: Hasil Tani Unggulan
 function HasilTaniContent() {
   const [showPopup, setShowPopup] = useState(false);
   const [popupContent, setPopupContent] = useState(null);
 
-  const hasilTani = [
+  const groupedHasilTani = [
     {
-      name: 'Singkong',
-      description: 'Hasil utama yang melimpah, menjadi bahan dasar berbagai olahan tradisional.',
-      image: 'https://images.unsplash.com/photo-1590736969955-71cc94901144?w=400&h=300&fit=crop',
-      recipes: [
-        { name: 'Gethuk Singkong', ingredients: ['1 kg singkong', '200g gula merah', '100ml santan', 'Garam secukupnya'], steps: ['Kukus singkong hingga empuk.', 'Haluskan singkong selagi panas.', 'Campurkan dengan gula merah dan santan.', 'Bentuk dan sajikan.'] },
-        { name: 'Keripik Singkong', ingredients: ['1 kg singkong', 'Minyak goreng', 'Garam', 'Bumbu balado (opsional)'], steps: ['Iris tipis singkong.', 'Rendam air garam, tiriskan.', 'Goreng hingga renyah.', 'Taburi bumbu.'] }
+      categoryName: 'Tanaman Pangan',
+      products: [
+        { name: 'Singkong', description: 'Hasil utama yang melimpah, menjadi bahan dasar berbagai olahan tradisional.', image: 'https://asset.kompas.com/crops/KPQ8xViX8vvPx2wkO3ReDN8viDA=/100x67:900x600/1200x800/data/photo/2022/12/24/63a6193568e2e.jpg', recipes: [ { name: 'Gethuk Singkong', ingredients: ['1 kg singkong', '200g gula merah', '100ml santan', 'Garam secukupnya'], steps: ['Kukus singkong hingga empuk.', 'Haluskan singkong selagi panas.', 'Campurkan dengan gula merah dan santan.', 'Bentuk dan sajikan.'] }, { name: 'Keripik Singkong', ingredients: ['1 kg singkong', 'Minyak goreng', 'Garam', 'Bumbu balado (opsional)'], steps: ['Iris tipis singkong.', 'Rendam air garam, tiriskan.', 'Goreng hingga renyah.', 'Taburi bumbu.'] } ] },
+        { name: 'Padi', description: 'Makanan pokok dengan sistem irigasi tradisional yang berkelanjutan.', image: 'https://cdn.hariansib.com/uploads/images/2024/02/_568_Pendapatan-Petani-Padi-Sawah-di-Kecamatan-Bandar-Kurang-Memadai.jpg', recipes: [ { name: 'Nasi Liwet', ingredients: ['2 cangkir beras', '400ml santan', '2 lbr daun salam', '1 btg serai'], steps: ['Cuci beras.', 'Rebus santan dan rempah.', 'Masukkan beras, masak hingga meresap.', 'Kukus hingga matang.'] }, { name: 'Kerupuk Nasi', ingredients: ['2 cangkir nasi dingin', 'Garam & ketumbar', 'Minyak goreng'], steps: ['Haluskan nasi.', 'Bumbui dan bentuk tipis.', 'Jemur hingga kering.', 'Goreng hingga mengembang.'] } ] },
+        { name: 'Jagung', description: 'Hasil pertanian serbaguna, komponen karbohidrat alami dalam olahan.', image: 'https://assets.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/padek/2020/11/jagung.jpeg', recipes: [ { name: 'Bakwan Jagung', ingredients: ['2 buah jagung', 'Tepung terigu', 'Daun bawang', 'Bumbu halus'], steps: ['Pipil dan ulek kasar jagung.', 'Campur semua bahan.', 'Goreng adonan per sendok.'] }, { name: 'Jagung Bakar', ingredients: ['Jagung manis', 'Mentega', 'Saus sambal', 'Kecap manis'], steps: ['Olesi jagung dengan mentega.', 'Bakar sambil diolesi saus.', 'Sajikan selagi hangat.'] } ] },
       ]
     },
     {
-      name: 'Kakao',
-      description: 'Kakao berkualitas tinggi yang menjadi ciri khas perkebunan desa.',
-      image: 'https://images.unsplash.com/photo-1511381939415-e44015466834?w=400&h=300&fit=crop',
-      recipes: [
-        { name: 'Bubuk Kakao Murni', ingredients: ['Biji kakao kering', 'Alat sangrai', 'Penggiling'], steps: ['Sangrai biji kakao.', 'Kupas kulitnya.', 'Giling hingga halus.', 'Ayak bubuk kakao.'] },
-        { name: 'Minuman Coklat', ingredients: ['3 sdm bubuk kakao', '2 sdm gula aren', '200ml air panas'], steps: ['Campur kakao dan gula.', 'Tuang air panas, aduk rata.', 'Sajikan hangat.'] }
+      categoryName: 'Hortikultura',
+      products: [
+        { name: 'Bawang Merah', description: 'Bumbu esensial yang memberikan cita rasa khas pada masakan.', image: 'https://allofresh.id/blog/wp-content/uploads/2023/06/cara-menanam-bawang-merah-2.jpg', recipes: [{name: 'Bawang Goreng', ingredients: ['Bawang Merah', 'Minyak Goreng'], steps: ['Iris tipis', 'Goreng hingga renyah']}] },
+        { name: 'Kacang Panjang', description: 'Sayuran hijau segar yang kaya nutrisi untuk masakan tradisional.', image: 'https://asset-2.tstatic.net/pontianak/foto/bank/images/gerak-membelit-sulur-tanaman-kacang-panjang-pada-kayu-tempat-tumbuhnya-disebut-gerak.jpg', recipes: [ { name: 'Tumis Kacang Panjang', ingredients: ['1 ikat kacang panjang', 'Tempe', 'Bawang merah & putih', 'Cabai'], steps: ['Potong-potong bahan.', 'Tumis bumbu hingga harum.', 'Masukkan kacang & tempe.', 'Masak hingga matang.'] }, { name: 'Urap Sayur', ingredients: ['Kacang panjang', 'Tauge', 'Bayam', 'Kelapa parut & bumbu urap'], steps: ['Rebus semua sayuran.', 'Campur kelapa dengan bumbu urap.', 'Aduk rata sayuran dan bumbu kelapa.'] } ] },
+        { name: 'Kedelai', description: 'Sumber protein nabati utama untuk pembuatan tahu dan tempe.', image: 'https://tanilink.com/uploads/berita/2024-06-19/cover_kedelai.jpg', recipes: [{name: 'Susu Kedelai', ingredients: ['Kedelai', 'Air', 'Gula'], steps: ['Rendam kedelai', 'Blender & saring', 'Rebus hingga matang']}] },
+        { name: 'Kacang Tanah', description: 'Protein nabati berkualitas yang tumbuh subur di tanah desa.', image: 'https://cdn.rri.co.id/berita/Entikong/o/1723039423494-kacang_tanah/2omyl66i6ozbx28.jpeg', recipes: [ { name: 'Selai Kacang', ingredients: ['500g kacang tanah sangrai', '3 sdm minyak', '2 sdm gula', '1 sdt garam'], steps: ['Blender kacang hingga halus.', 'Tambahkan minyak, gula, garam.', 'Blender lagi hingga merata.'] }, { name: 'Kacang Bawang', ingredients: ['500g kacang tanah', '5 siung bawang putih', 'Garam', 'Minyak goreng'], steps: ['Rendam kacang, tiriskan.', 'Goreng bawang putih hingga harum.', 'Goreng kacang hingga matang.', 'Campur semua bahan.'] } ] },
       ]
     },
     {
-      name: 'Kacang Tanah',
-      description: 'Protein nabati berkualitas yang tumbuh subur di tanah desa.',
-      image: 'https://images.unsplash.com/photo-1589927986089-35812388d1a4?w=400&h=300&fit=crop',
-      recipes: [
-        { name: 'Selai Kacang', ingredients: ['500g kacang tanah sangrai', '3 sdm minyak', '2 sdm gula', '1 sdt garam'], steps: ['Blender kacang hingga halus.', 'Tambahkan minyak, gula, garam.', 'Blender lagi hingga merata.'] },
-        { name: 'Kacang Bawang', ingredients: ['500g kacang tanah', '5 siung bawang putih', 'Garam', 'Minyak goreng'], steps: ['Rendam kacang, tiriskan.', 'Goreng bawang putih hingga harum.', 'Goreng kacang hingga matang.', 'Campur semua bahan.'] }
+      categoryName: 'Perkebunan',
+      products: [
+        { name: 'Kakao', description: 'Kakao berkualitas tinggi yang menjadi ciri khas perkebunan desa.', image: 'https://png.pngtree.com/thumb_back/fh260/background/20240604/pngtree-cocoa-pods-or-cocoa-fruits-on-cocoa-farm-image_15739574.jpg', recipes: [ { name: 'Bubuk Kakao Murni', ingredients: ['Biji kakao kering', 'Alat sangrai', 'Penggiling'], steps: ['Sangrai biji kakao.', 'Kupas kulitnya.', 'Giling hingga halus.', 'Ayak bubuk kakao.'] }, { name: 'Minuman Coklat', ingredients: ['3 sdm bubuk kakao', '2 sdm gula aren', '200ml air panas'], steps: ['Campur kakao dan gula.', 'Tuang air panas, aduk rata.', 'Sajikan hangat.'] } ] },
+        { name: 'Tebu', description: 'Tanaman utama penghasil gula dan minuman menyegarkan.', image: 'https://news.majalahhortus.com/wp-content/uploads/2019/10/tebu-1.jpg', recipes: [{name: 'Es Tebu Murni', ingredients: ['Batang Tebu Segar', 'Es Batu'], steps: ['Giling tebu', 'Sajikan dengan es']}] },
       ]
-    },
-    {
-      name: 'Padi',
-      description: 'Makanan pokok dengan sistem irigasi tradisional yang berkelanjutan.',
-      image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&h=300&fit=crop',
-      recipes: [
-        { name: 'Nasi Liwet', ingredients: ['2 cangkir beras', '400ml santan', '2 lbr daun salam', '1 btg serai'], steps: ['Cuci beras.', 'Rebus santan dan rempah.', 'Masukkan beras, masak hingga meresap.', 'Kukus hingga matang.'] },
-        { name: 'Kerupuk Nasi', ingredients: ['2 cangkir nasi dingin', 'Garam & ketumbar', 'Minyak goreng'], steps: ['Haluskan nasi.', 'Bumbui dan bentuk tipis.', 'Jemur hingga kering.', 'Goreng hingga mengembang.'] }
-      ]
-    },
-    {
-        name: 'Jagung',
-        description: 'Hasil pertanian serbaguna, komponen karbohidrat alami dalam olahan.',
-        image: 'https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=400&h=300&fit=crop',
-        recipes: [
-            { name: 'Bakwan Jagung', ingredients: ['2 buah jagung', 'Tepung terigu', 'Daun bawang', 'Bumbu halus'], steps: ['Pipil dan ulek kasar jagung.', 'Campur semua bahan.', 'Goreng adonan per sendok.'] },
-            { name: 'Jagung Bakar', ingredients: ['Jagung manis', 'Mentega', 'Saus sambal', 'Kecap manis'], steps: ['Olesi jagung dengan mentega.', 'Bakar sambil diolesi saus.', 'Sajikan selagi hangat.'] }
-        ]
-    },
-    {
-        name: 'Kacang Panjang',
-        description: 'Sayuran hijau segar yang kaya nutrisi untuk masakan tradisional.',
-        image: 'https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?w=400&h=300&fit=crop',
-        recipes: [
-            { name: 'Tumis Kacang Panjang', ingredients: ['1 ikat kacang panjang', 'Tempe', 'Bawang merah & putih', 'Cabai'], steps: ['Potong-potong bahan.', 'Tumis bumbu hingga harum.', 'Masukkan kacang & tempe.', 'Masak hingga matang.'] },
-            { name: 'Urap Sayur', ingredients: ['Kacang panjang', 'Tauge', 'Bayam', 'Kelapa parut & bumbu urap'], steps: ['Rebus semua sayuran.', 'Campur kelapa dengan bumbu urap.', 'Aduk rata sayuran dan bumbu kelapa.'] }
-        ]
     }
   ];
 
@@ -79,49 +48,74 @@ function HasilTaniContent() {
   };
 
   return (
-    <div className="space-y-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {hasilTani.map((product) => (
-          <div key={product.name} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-105" onClick={() => handleCardClick(product)}>
-            <div className="h-48 overflow-hidden">
-              <img src={product.image} alt={product.name} className="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-bold text-green-800 mb-2">{product.name}</h3>
-              <p className="text-gray-600 text-sm mb-4">{product.description}</p>
-              <div className="flex items-center text-green-600 font-semibold">
-                <span className="text-sm">Lihat Menu Olahan</span>
-                <ChevronRight className="w-4 h-4 ml-1" />
+    <div className="space-y-12">
+      {groupedHasilTani.map((categoryGroup) => (
+        <section key={categoryGroup.categoryName}>
+          <h2 className="text-3xl font-bold text-green-800 mb-6 pb-2 border-b-2 border-green-200">
+            {categoryGroup.categoryName}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {categoryGroup.products.map((product) => (
+              <div key={product.name} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-105" onClick={() => handleCardClick(product)}>
+                <div className="h-48 overflow-hidden">
+                  <img src={product.image} alt={product.name} className="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-green-800 mb-2">{product.name}</h3>
+                  <p className="text-gray-600 text-sm mb-4">{product.description}</p>
+                  <div className="flex items-center text-green-600 font-semibold">
+                    <span className="text-sm">Lihat Menu Olahan</span>
+                    <ChevronRight className="w-4 h-4 ml-1" />
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </section>
+      ))}
 
+      {/* --- POPUP DENGAN DESAIN SIMPEL DAN RAPI --- */}
       {showPopup && popupContent && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-            <div className="sticky top-0 bg-white p-6 flex items-center justify-between border-b">
-              <h2 className="text-2xl font-bold text-green-800">Menu Olahan {popupContent.name}</h2>
-              <button onClick={closePopup} className="p-2 hover:bg-gray-100 rounded-full">
+        <div className="fixed inset-0 bg-gray-900/40 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] flex flex-col">
+            {/* Header Popup */}
+            <div className="flex-shrink-0 p-5 flex items-center justify-between border-b border-gray-200">
+              <h2 className="text-2xl font-bold text-gray-800">Menu Olahan {popupContent.name}</h2>
+              <button onClick={closePopup} className="p-2 hover:bg-gray-100 rounded-full transition-colors">
                 <X className="w-6 h-6 text-gray-600" />
               </button>
             </div>
-            <div className="p-6 space-y-6">
-              {popupContent.recipes.map((recipe) => (
-                <div key={recipe.name} className="bg-gray-50 rounded-xl p-6">
+
+            {/* Konten Popup (Bisa di-scroll) */}
+            <div className="flex-grow p-6 space-y-8 overflow-y-auto">
+              {popupContent.recipes.map((recipe, index) => (
+                <div key={recipe.name} className={index > 0 ? 'border-t border-gray-200 pt-6' : ''}>
                   <h3 className="text-xl font-bold text-green-800 mb-4">{recipe.name}</h3>
-                  <div className="grid sm:grid-cols-2 gap-6">
+                  <div className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
+                    {/* Kolom Bahan */}
                     <div>
-                      <h4 className="font-semibold text-gray-800 mb-2">Bahan:</h4>
-                      <ul className="list-disc list-inside text-gray-700 space-y-1">
-                        {recipe.ingredients.map((item) => <li key={item}>{item}</li>)}
+                      <h4 className="font-semibold text-gray-700 mb-3">Bahan-bahan:</h4>
+                      <ul className="space-y-2">
+                        {recipe.ingredients.map((item, idx) => (
+                          <li key={idx} className="flex items-start gap-3 text-gray-600">
+                            <span className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
                       </ul>
                     </div>
+                    {/* Kolom Cara Membuat */}
                     <div>
-                      <h4 className="font-semibold text-gray-800 mb-2">Cara Membuat:</h4>
-                      <ol className="list-decimal list-inside text-gray-700 space-y-1">
-                        {recipe.steps.map((step) => <li key={step}>{step}</li>)}
+                      <h4 className="font-semibold text-gray-700 mb-3">Cara Membuat:</h4>
+                      <ol className="space-y-3">
+                        {recipe.steps.map((step, idx) => (
+                           <li key={idx} className="flex items-start gap-3 text-gray-600">
+                            <span className="flex-shrink-0 w-6 h-6 bg-green-100 text-green-800 font-bold text-sm rounded-full flex items-center justify-center">
+                              {idx + 1}
+                            </span>
+                            <span>{step}</span>
+                          </li>
+                        ))}
                       </ol>
                     </div>
                   </div>
@@ -135,17 +129,16 @@ function HasilTaniContent() {
   );
 }
 
-// Komponen Halaman Utama
+
+// --- Komponen Halaman Utama (TIDAK ADA PERUBAHAN) ---
 function Pertanian() {
-  // State untuk melacak tab mana yang aktif
-  const [activeTab, setActiveTab] = useState('pertanian'); // Diatur ke 'pertanian' agar cocok dengan id tab pertama
+  const [activeTab, setActiveTab] = useState('pertanian');
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
       <Navbar />
-      {/* Header */}
       <div className="bg-white shadow-lg">
-        <div className="max-w-6xl mx-auto px-6 py-8">
+        <div className="max-w-6xl mx-auto mt-16 px-6 py-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-green-800 mb-4">Potensi Pertanian Desa Mlokomanis Wetan</h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -155,13 +148,11 @@ function Pertanian() {
           </div>
         </div>
       </div>
-
       <main className="max-w-6xl mx-auto px-6 py-8">
-        {/* Navigation Tabs dengan gaya kondisional */}
         <div className="flex flex-wrap justify-center gap-4 mb-10">
           {[
             { id: 'pertanian', label: 'Hasil Tani Unggulan', icon: <Leaf className="w-5 h-5" />, path: '/potensi/pertanian' },
-            { id: 'gethuk', label: 'Inovasi Gethuk Kakao', icon: <Heart className="w-5 h-5" />, path: '/potensi/InovasiGethukKakao' },
+            { id: 'brownis', label: 'Inovasi Produk', icon: <Heart className="w-5 h-5" />, path: '/potensi/InovasiProduk' },
             { id: 'proker', label: 'Hasil Proker Kami', icon: <Users className="w-5 h-5" />, path: '/potensi/HasilProkerKami' }
           ].map((tab) => {
             const isActive = activeTab === tab.id;
@@ -169,13 +160,11 @@ function Pertanian() {
               <Link
                 key={tab.id}
                 to={tab.path}
-                // Terapkan gaya berdasarkan apakah tab ini aktif atau tidak
                 className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 transform ${
                   isActive
-                    ? 'bg-green-600 text-white shadow-lg scale-105' // Gaya untuk tab aktif (hijau)
-                    : 'bg-white text-green-600 hover:bg-green-50 shadow-md' // Gaya untuk tab inaktif (putih)
+                    ? 'bg-green-600 text-white shadow-lg scale-105'
+                    : 'bg-white text-green-600 hover:bg-green-50 shadow-md'
                 }`}
-                // Perbarui state saat tombol diklik
                 onClick={() => setActiveTab(tab.id)}
               >
                 {tab.icon}
@@ -184,15 +173,8 @@ function Pertanian() {
             );
           })}
         </div>
-
-        {/* Konten akan ditampilkan berdasarkan tab yang aktif */}
-        {/* Saat ini, hanya konten untuk 'pertanian' yang ditampilkan */}
         {activeTab === 'pertanian' && <HasilTaniContent />}
-        {/* Anda bisa menambahkan konten lain di sini */}
-        {/* {activeTab === 'gethuk' && <InovasiGethukContent />} */}
-
       </main>
-
       <Footer />
     </div>
   );

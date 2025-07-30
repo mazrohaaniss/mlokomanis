@@ -10,7 +10,7 @@ function HasilProkerContent() {
   const handlePromotion = (platform) => {
     if (platform === 'whatsapp') {
       // Menyesuaikan nama desa agar konsisten
-      window.open('https://wa.me/6281234567890?text=Halo, saya tertarik untuk berkolaborasi dalam program kerja di Desa Mlokomanis Wetan.', '_blank');
+      window.open('https://wa.me/6289646303500?text=Halo, saya tertarik untuk berkolaborasi dalam program kerja di Desa Mlokomanis Wetan.', '_blank');
     }
   };
 
@@ -108,7 +108,7 @@ function HasilProkerKami() {
       <Navbar />
       {/* Header */}
       <div className="bg-white shadow-lg">
-        <div className="max-w-6xl mx-auto px-6 py-8">
+        <div className="max-w-6xl mt-16 mx-auto px-6 py-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-green-800 mb-4">Potensi Pertanian Desa Mlokomanis Wetan</h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
