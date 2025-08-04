@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronRight, Leaf, Heart, Users, X, Building2 } from 'lucide-react';
-import Navbar from '../components/navbar';
-import Footer from '../components/footer';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 
 function PabrikTahuContent() {
@@ -227,9 +227,9 @@ function PabrikTahu() {
       <main className="max-w-6xl mx-auto px-6 py-8">
         <div className="flex flex-wrap justify-center gap-4 mb-10">
           {[
-            { id: 'PabrikTahu', label: 'Tentang Pabrik', icon: <Building2 className="w-5 h-5" />, path: '/potensi/PabrikTahu' },
-            { id: 'nuggettahu', label: 'Inovasi Produk', icon: <Heart className="w-5 h-5" />, path: '/potensi/NuggetTahu' },
-            { id: 'proker', label: 'Hasil Proker Kami', icon: <Users className="w-5 h-5" />, path: '/potensi/ProkerKelompok2' }
+            { id: 'PabrikTahu', label: 'Pabrik Tahu', icon: <Building2 className="w-5 h-5" />, path: '/potensi/pabrik-tahu' },
+            { id: 'NuggetTahu', label: 'Inovasi Produk Nugget Tahu', icon: <Heart className="w-5 h-5" />, path: '/potensi/NuggetTahu' },
+            { id: 'VideoPengenalan', label: ' Video Pengenalan', icon: <Users className="w-5 h-5" />, path: '/potensi/VideoPengenalan' }
           ].map((tab) => {
             const isActive = activeTab === tab.id;
             return (

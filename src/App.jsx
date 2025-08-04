@@ -1,12 +1,12 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+  import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import Pertanian from './pages/Pertanian';
 import InovasiProduk from './pages/InovasiProduk';
 import HasilProkerKami from './pages/HasilProkerKami';
 import PabrikTahu from './pages/PabrikTahu';
 import Karawitan from './pages/Karawitan';
-
-
+import NuggetTahu from './pages/NuggetTahu';
+import VideoPengenalan from './pages/VideoPengenalan';
 
 function App() {
 
@@ -22,6 +22,8 @@ function App() {
         <Route path="/potensi/HasilProkerKami" element={<HasilProkerKami />} />
         <Route path="/potensi/pabrik-tahu" element={<PabrikTahu />} />
         <Route path="/potensi/karawitan" element={<Karawitan />} />
+        <Route path="/potensi/NuggetTahu" element={<NuggetTahu />} />
+        <Route path="/potensi/VideoPengenalan" element={< VideoPengenalan />} />
 
       </Routes>
     </BrowserRouter>
