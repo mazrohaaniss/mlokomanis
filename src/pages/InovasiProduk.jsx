@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom'; 
 import { Instagram, MessageCircle, Clock, ShoppingCart, Heart, ExternalLink, Leaf, Users, ZoomIn, X, Star, Award, Sparkles, ChefHat, Package, Truck, ArrowRight, Flame, Zap, Timer, Utensils } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -59,7 +60,7 @@ function ProductShowcase() {
           <div className="relative bg-gradient-to-br from-amber-400 to-orange-400 rounded-3xl p-8 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
             <div className="bg-white rounded-2xl p-6 shadow-xl">
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjp9Lbak1TWVWNdVvXdgLnxlWohfp4h1lBdg&s"
+                src="https://images.unsplash.com/photo-1587668178277-295251f432ce?w=500&h=400&fit=crop"
                 alt="Brownies Singkong Premium"
                 className="w-full h-80 object-cover rounded-xl shadow-lg"
               />
@@ -292,71 +293,75 @@ function InteractiveGallery() {
     </div>
   );
 }
-
-// Tab Navigation Component
-function TabNavigation({ activeTab, setActiveTab }) {
-  const tabs = [
-    { id: 'pertanian', label: 'Hasil Tani Unggulan', icon: <Leaf className="w-5 h-5" /> },
-    { id: 'gethuk', label: 'Inovasi Produk', icon: <Heart className="w-5 h-5" /> },
-    { id: 'proker', label: 'Hasil Proker Kami', icon: <Users className="w-5 h-5" /> }
-  ];
-
+// Komponen Konten Utama Halaman
+function InovasiProdukContent() {
   return (
-    <div className="flex flex-wrap justify-center gap-4 mb-10">
-      {tabs.map((tab) => {
-        const isActive = activeTab === tab.id;
-        return (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
-            className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 transform ${
-              isActive
-                ? 'bg-green-600 text-white shadow-lg scale-105'
-                : 'bg-white text-green-600 hover:bg-green-50 shadow-md'
-            }`}
-          >
-            {tab.icon}
-            {tab.label}
-          </button>
-        );
-      })}
-    </div>
-  );
-}
-
-// Main Component
-function InovasiProduk() {
-  const [activeTab, setActiveTab] = useState('gethuk');
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
-      <Navbar />
-      
-      {/* Header */}
-      <div className="bg-white shadow-lg">
-        <div className="max-w-6xl mx-auto mt-16 px-6 py-8">
-          <h1 className="text-4xl text-center font-bold text-green-800 mb-4">
-            Inovasi Produk Unggulan
-          </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto text-center">
-            Menghadirkan inovasi brownies singkong coklat premium yang memadukan kearifan lokal dengan cita rasa modern untuk kemajuan ekonomi desa.
-          </p>
-        </div>
-      </div>
-
-      <main className="max-w-6xl mx-auto px-6 py-8">
-        <TabNavigation activeTab={activeTab} setActiveTab={setActiveTab} />
-
-        <div className="space-y-16">
+      <div className="space-y-16">
           <ProductShowcase />
           <ProcessTimeline />
           <InteractiveGallery />
-        </div>
-      </main>
+      </div>
+  )
+}
 
-      <Footer />
+
+// --- Komponen Halaman Utama (Main Page Component) ---
+function InovasiProduk() {
+// State untuk mengelola tab yang aktif secara visual
+const [activeTab, setActiveTab] = useState('brownis');
+
+return (
+  <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
+    <Navbar />
+    
+    {/* Header */}
+    <div className="bg-white shadow-lg">
+      <div className="max-w-6xl mx-auto mt-16 px-6 py-8">
+        <h1 className="text-4xl text-center font-bold text-green-800 mb-4">
+          Inovasi Produk Unggulan
+        </h1>
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto text-center">
+          Menghadirkan inovasi brownies singkong coklat premium yang memadukan kearifan lokal dengan cita rasa modern untuk kemajuan ekonomi desa.
+        </p>
+      </div>
     </div>
-  );
+
+    <main className="max-w-6xl mx-auto px-6 py-8">
+      {/* --- Logika Navigasi diletakkan langsung di sini --- */}
+      <div className="flex flex-wrap justify-center gap-4 mb-10">
+        {[
+          { id: 'pertanian', label: 'Hasil Tani Unggulan', icon: <Leaf className="w-5 h-5" />, path: '/potensi/pertanian' },
+          { id: 'brownis', label: 'Inovasi Produk', icon: <Heart className="w-5 h-5" />, path: '/potensi/InovasiProduk' },
+          { id: 'proker', label: 'Hasil Proker Kami', icon: <Users className="w-5 h-5" />, path: '/potensi/HasilProkerKami' }
+        ].map((tab) => {
+          const isActive = activeTab === tab.id;
+          return (
+            <Link
+              key={tab.id}
+              to={tab.path}
+              className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 transform ${
+                isActive
+                  ? 'bg-green-600 text-white shadow-lg scale-105'
+                  : 'bg-white text-green-600 hover:bg-green-50 shadow-md'
+              }`}
+              // onClick sengaja tidak ada agar tidak mengubah state saat navigasi
+              // State 'activeTab' akan dikelola oleh halaman masing-masing
+            >
+              {tab.icon}
+              {tab.label}
+            </Link>
+          );
+        })}
+      </div>
+      
+      {/* Konten Halaman */}
+      <InovasiProdukContent />
+
+    </main>
+
+    <Footer />
+  </div>
+);
 }
 
 export default InovasiProduk;
