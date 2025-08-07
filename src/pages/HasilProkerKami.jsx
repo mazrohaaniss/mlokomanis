@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Leaf, Heart, Users, ExternalLink, MessageCircle } from 'lucide-react';
-import Navbar from '../components/navbar';
-import Footer from '../components/footer';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 
 // Komponen Konten: Detail Hasil Program Kerja
@@ -123,7 +123,7 @@ function HasilProkerKami() {
         <div className="flex flex-wrap justify-center gap-4 mb-10">
           {[
             { id: 'pertanian', label: 'Hasil Tani Unggulan', icon: <Leaf className="w-5 h-5" />, path: '/potensi/pertanian' },
-            { id: 'gethuk', label: 'Inovasi Gethuk Kakao', icon: <Heart className="w-5 h-5" />, path: '/potensi/InovasiGethukKakao' },
+    { id: 'gethuk', label: 'Inovasi Produk', icon: <Heart className="w-5 h-5" />, path: '/potensi/InovasiProduk' },
             { id: 'proker', label: 'Hasil Proker Kami', icon: <Users className="w-5 h-5" />, path: '/potensi/HasilProkerKami' }
           ].map((tab) => {
             const isActive = activeTab === tab.id;

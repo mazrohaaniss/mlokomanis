@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Instagram, MessageCircle, Clock, ShoppingCart, Heart, ExternalLink, Leaf, Users, ZoomIn, X, Star, Award, Sparkles, ChefHat, Package, Truck, ArrowRight } from 'lucide-react';
+import { Instagram, MessageCircle, Clock, ShoppingCart, Heart, ExternalLink, Leaf, Users, ZoomIn, X, Star, Award, Sparkles, ChefHat, Package, Truck, ArrowRight, Building2, DrumstickIcon } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
@@ -13,18 +13,18 @@ function ProductShowcase() {
         <div className="space-y-8">
           <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold border border-amber-200">
             <Sparkles className="w-4 h-4" />
-            Produk Inovasi Unggulan
+            Produk Inovasi Nugget Tahu
           </div>
           
           <h2 className="text-5xl font-black text-gray-800 leading-tight">
-            Brownies Singkong
+            Nugget Tahu
             <span className="block bg-gradient-to-r from-amber-600 to-orange-500 bg-clip-text text-transparent">
-              Premium Coklat
+              The Naghu Bites
             </span>
           </h2>
           
           <p className="text-xl text-gray-600 leading-relaxed">
-            Revolusi cita rasa tradisional dengan sentuhan modern. Brownies lembut dari singkong pilihan yang dipadukan dengan coklat premium berkualitas tinggi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
 
           {/* Features Grid */}
@@ -58,16 +58,8 @@ function ProductShowcase() {
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/30">
             <div className="flex items-center justify-between mb-6">
               <div>
-                <div className="flex items-center gap-1 mb-2">
-                  <Star className="w-5 h-5 fill-amber-400 text-amber-400" />
-                  <Star className="w-5 h-5 fill-amber-400 text-amber-400" />
-                  <Star className="w-5 h-5 fill-amber-400 text-amber-400" />
-                  <Star className="w-5 h-5 fill-amber-400 text-amber-400" />
-                  <Star className="w-5 h-5 fill-amber-400 text-amber-400" />
-                  <span className="text-sm text-gray-600 ml-2">(4.9/5)</span>
-                </div>
                 <div className="text-4xl font-black text-gray-900">
-                  Rp 35.000
+                  Rp 20.000
                   <span className="text-lg font-normal text-gray-500">/box</span>
                 </div>
               </div>
@@ -132,10 +124,10 @@ function ProcessTimeline() {
   const [activeStep, setActiveStep] = useState(0);
   
   const steps = [
-    { title: "Seleksi Singkong Premium", description: "Memilih singkong segar berkualitas tinggi dari petani lokal", details: ["Singkong pilihan umur 8-12 bulan", "Tekstur halus dan tidak berserat", "Bebas dari hama dan penyakit"], icon: <Leaf className="w-8 h-8" />, color: "from-green-500 to-emerald-600", image: "https://images.unsplash.com/photo-1582169296801-56e4eaa3d9cc?w=400&h=300&fit=crop" },
-    { title: "Proses Pengolahan", description: "Mengolah singkong dengan teknologi modern dan higienis", details: ["Pencucian dengan air mengalir", "Pengukusan pada suhu optimal", "Penghancuran dengan mesin food processor"], icon: <ChefHat className="w-8 h-8" />, color: "from-blue-500 to-cyan-600", image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop" },
-    { title: "Pencampuran Coklat Premium", description: "Menambahkan coklat berkualitas tinggi dengan proporsi sempurna", details: ["Coklat bubuk import grade A", "Mixing dengan teknologi modern", "Quality control setiap batch"], icon: <Heart className="w-8 h-8" />, color: "from-amber-500 to-orange-600", image: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=400&h=300&fit=crop" },
-    { title: "Packaging & Quality Check", description: "Kemasan food grade dan pemeriksaan kualitas akhir", details: ["Kemasan vakum food grade", "Label nutrisi lengkap", "Tanggal kadaluarsa jelas"], icon: <Package className="w-8 h-8" />, color: "from-gray-500 to-gray-600", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" }
+    { title: "Terbuat Dari Ampas Tahu Dengan Kandung Gizi yang Tinggi", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", details: ["Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amett", "Lorem ipsum dolor sit amet"], icon: <Leaf className="w-8 h-8" />, color: "from-green-500 to-emerald-600", image: "https://images.unsplash.com/photo-1582169296801-56e4eaa3d9cc?w=400&h=300&fit=crop" },
+    { title: "Prosos Pembuatan Yang Sudah Sesuai SOP Dan higenis", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", details: ["Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amett", "Lorem ipsum dolor sit amet"], icon: <ChefHat className="w-8 h-8" />, color: "from-blue-500 to-cyan-600", image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop" },
+    { title: "Berbagai Rasa dan Juga kaya Akan Gizi", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", details: ["Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amett", "Lorem ipsum dolor sit amet"], icon: <Heart className="w-8 h-8" />, color: "from-amber-500 to-orange-600", image: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=400&h=300&fit=crop" },
+    { title: "Packaging & Quality Check",description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", details: ["Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amett", "Lorem ipsum dolor sit amet"], icon: <Package className="w-8 h-8" />, color: "from-gray-500 to-gray-600", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" }
   ];
 
   useEffect(() => {
@@ -151,11 +143,11 @@ function ProcessTimeline() {
         <h3 className="text-4xl font-black text-gray-800 mb-4">
           Proses Pembuatan
           <span className="block bg-gradient-to-r from-amber-600 to-orange-500 bg-clip-text text-transparent">
-            Brownies Premium
+            The NAGHU BITES
           </span>
         </h3>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Setiap langkah dikerjakan dengan teliti untuk menghasilkan brownies singkong terbaik.
+          Setiap langkah dikerjakan dengan teliti untuk menghasilkan Nugget Tahu terbaik.
         </p>
       </div>
 
@@ -258,7 +250,7 @@ function InteractiveGallery() {
           </span>
         </h3>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Lihat keindahan dan kualitas brownies singkong premium kami.
+          Lihat keindahan dan kualitas Nugget Tahu premium kami.
         </p>
       </div>
 
@@ -335,13 +327,13 @@ function InteractiveGallery() {
 }
 
 // Main Component
-function InovasiProduk() {
-  const [activeTab, setActiveTab] = useState('gethuk'); // Diubah agar sesuai dengan id tab
+function NuggetTahu() {
+  const [activeTab, setActiveTab] = useState('NuggetTahu'); // Diubah agar sesuai dengan id tab
 
   const tabs = [
-    { id: 'pertanian', label: 'Hasil Tani Unggulan', icon: <Leaf className="w-5 h-5" />, path: '/potensi/pertanian' },
-    { id: 'gethuk', label: 'Inovasi Produk', icon: <Heart className="w-5 h-5" />, path: '/potensi/InovasiProduk' },
-    { id: 'proker', label: 'Hasil Proker Kami', icon: <Users className="w-5 h-5" />, path: '/potensi/HasilProkerKami' }
+  { id: 'PabrikTahu', label: 'Pabrik Tahu', icon: <Building2 className="w-5 h-5" />, path: '/potensi/pabrik-tahu' },
+  { id: 'NuggetTahu', label: 'Inovasi Produk Nugget Tahu', icon: <Heart className="w-5 h-5" />, path: '/potensi/NuggetTahu' },
+  { id: 'VideoPengenalan', label: ' Video Pengenalan', icon: <Users className="w-5 h-5" />, path: '/potensi/VideoPengenalan' }
   ];
 
   return (
@@ -349,14 +341,15 @@ function InovasiProduk() {
       <Navbar />
       
       {/* --- HEADER BARU YANG DISESUAIKAN --- */}
+            {/* Header */}
       <div className="bg-white shadow-lg">
-      <div className="max-w-6xl mx-auto mt-16 px-6 py-8">
-        <h1 className="text-4xl text-center font-bold text-green-800 mb-4">
-                Inovasi Produk Unggulan
-            </h1>
+        <div className="max-w-6xl mt-16 mx-auto px-6 py-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-green-800 mb-4">Inovasi Produk Nugget Tahu</h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Menghadirkan inovasi brownies singkong coklat premium yang memadukan kearifan lokal dengan cita rasa modern untuk kemajuan ekonomi desa.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             </p>
+          </div>
         </div>
       </div>
 
@@ -394,4 +387,4 @@ function InovasiProduk() {
   );
 }
 
-export default InovasiProduk;
+export default NuggetTahu;
