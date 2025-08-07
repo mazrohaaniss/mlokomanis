@@ -1,8 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Instagram, MessageCircle, Clock, ShoppingCart, Heart, ExternalLink, Leaf, Users, ZoomIn, X, Star, Award, Sparkles, ChefHat, Package, Truck, ArrowRight } from 'lucide-react';
+import { Instagram, MessageCircle, Clock, ShoppingCart, Heart, ExternalLink, Leaf, Users, ZoomIn, X, Star, Award, Sparkles, ChefHat, Package, Truck, ArrowRight, Flame, Zap, Timer, Utensils } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { Link } from 'react-router-dom';
 
 // Product Showcase Component
 function ProductShowcase() {
@@ -53,47 +52,6 @@ function ProductShowcase() {
               </div>
             </div>
           </div>
-
-          {/* Price & Actions */}
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/30">
-            <div className="flex items-center justify-between mb-6">
-              <div>
-                <div className="flex items-center gap-1 mb-2">
-                  <Star className="w-5 h-5 fill-amber-400 text-amber-400" />
-                  <Star className="w-5 h-5 fill-amber-400 text-amber-400" />
-                  <Star className="w-5 h-5 fill-amber-400 text-amber-400" />
-                  <Star className="w-5 h-5 fill-amber-400 text-amber-400" />
-                  <Star className="w-5 h-5 fill-amber-400 text-amber-400" />
-                  <span className="text-sm text-gray-600 ml-2">(4.9/5)</span>
-                </div>
-                <div className="text-4xl font-black text-gray-900">
-                  Rp 35.000
-                  <span className="text-lg font-normal text-gray-500">/box</span>
-                </div>
-              </div>
-              <div className="text-right">
-                <div className="flex items-center gap-2 text-green-600 mb-1">
-                  <Clock className="w-4 h-4" />
-                  <span className="text-sm font-semibold">Tahan 7-10 Hari</span>
-                </div>
-                <div className="flex items-center gap-2 text-blue-600">
-                  <Truck className="w-4 h-4" />
-                  <span className="text-sm font-semibold">Free Delivery</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="flex gap-4">
-              <button className="flex-1 bg-green-800 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-green-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3">
-                <MessageCircle className="w-6 h-6" />
-                Pesan Sekarang
-              </button>
-              <button className="px-6 py-4 bg-gray-200 text-gray-800 rounded-xl font-bold hover:bg-gray-300 transition-all duration-300 transform hover:scale-105 flex items-center gap-3">
-                <Instagram className="w-6 h-6" />
-                Ikuti
-              </button>
-            </div>
-          </div>
         </div>
 
         {/* Product Visual */}
@@ -101,7 +59,7 @@ function ProductShowcase() {
           <div className="relative bg-gradient-to-br from-amber-400 to-orange-400 rounded-3xl p-8 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
             <div className="bg-white rounded-2xl p-6 shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1587668178277-295251f432ce?w=500&h=400&fit=crop"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjp9Lbak1TWVWNdVvXdgLnxlWohfp4h1lBdg&s"
                 alt="Brownies Singkong Premium"
                 className="w-full h-80 object-cover rounded-xl shadow-lg"
               />
@@ -132,10 +90,90 @@ function ProcessTimeline() {
   const [activeStep, setActiveStep] = useState(0);
   
   const steps = [
-    { title: "Seleksi Singkong Premium", description: "Memilih singkong segar berkualitas tinggi dari petani lokal", details: ["Singkong pilihan umur 8-12 bulan", "Tekstur halus dan tidak berserat", "Bebas dari hama dan penyakit"], icon: <Leaf className="w-8 h-8" />, color: "from-green-500 to-emerald-600", image: "https://images.unsplash.com/photo-1582169296801-56e4eaa3d9cc?w=400&h=300&fit=crop" },
-    { title: "Proses Pengolahan", description: "Mengolah singkong dengan teknologi modern dan higienis", details: ["Pencucian dengan air mengalir", "Pengukusan pada suhu optimal", "Penghancuran dengan mesin food processor"], icon: <ChefHat className="w-8 h-8" />, color: "from-blue-500 to-cyan-600", image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop" },
-    { title: "Pencampuran Coklat Premium", description: "Menambahkan coklat berkualitas tinggi dengan proporsi sempurna", details: ["Coklat bubuk import grade A", "Mixing dengan teknologi modern", "Quality control setiap batch"], icon: <Heart className="w-8 h-8" />, color: "from-amber-500 to-orange-600", image: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=400&h=300&fit=crop" },
-    { title: "Packaging & Quality Check", description: "Kemasan food grade dan pemeriksaan kualitas akhir", details: ["Kemasan vakum food grade", "Label nutrisi lengkap", "Tanggal kadaluarsa jelas"], icon: <Package className="w-8 h-8" />, color: "from-gray-500 to-gray-600", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" }
+    { 
+      title: "Persiapan Bahan", 
+      description: "Menyiapkan semua bahan berkualitas premium sesuai takaran", 
+      details: [
+        "Bahan A: 4 butir telur, 10 sdm gula pasir, 1/2 sdm SP",
+        "Bahan B: 1/2 sdm vanili, 1/4 sdm baking powder, 2 sdm coklat bubuk",
+        "Bahan C: 125g coklat batang, 150ml minyak, 1,5 sdm SKM",
+        "Bahan D: 250g singkong parut (diperas airnya)"
+      ], 
+      icon: <Leaf className="w-8 h-8" />, 
+      color: "from-green-500 to-emerald-600"
+    },
+    { 
+      title: "Melelehkan Coklat", 
+      description: "Panaskan bahan C hingga coklat meleleh sempurna", 
+      details: [
+        "Masukkan coklat batang, minyak, dan SKM dalam mangkuk",
+        "Panaskan dengan api kecil sambil diaduk",
+        "Pastikan tekstur halus dan tidak menggumpal",
+        "Dinginkan sebentar sebelum digunakan"
+      ], 
+      icon: <Flame className="w-8 h-8" />, 
+      color: "from-orange-500 to-red-600"
+    },
+    { 
+      title: "Mengocok Telur", 
+      description: "Mixer bahan A hingga mengembang, putih dan lembut", 
+      details: [
+        "Mixer telur, gula pasir, dan SP dengan kecepatan maksimal",
+        "Kocok hingga adonan mengembang dan berwarna putih",
+        "Pastikan tekstur lembut dan volume bertambah 2-3 kali lipat",
+        "Proses ini memakan waktu sekitar 10-15 menit"
+      ], 
+      icon: <Zap className="w-8 h-8" />, 
+      color: "from-blue-500 to-cyan-600"
+    },
+    { 
+      title: "Pencampuran Bertahap", 
+      description: "Menambahkan singkong parut dan bahan lainnya secara bergantian", 
+      details: [
+        "Turunkan kecepatan mixer ke level 1 (paling rendah)",
+        "Masukkan singkong parut sedikit demi sedikit",
+        "Tambahkan bahan B dan C secara bergantian",
+        "Mixer hingga rata tanpa overmixing"
+      ], 
+      icon: <ChefHat className="w-8 h-8" />, 
+      color: "from-purple-500 to-indigo-600"
+    },
+    { 
+      title: "Persiapan Kukus", 
+      description: "Menyiapkan loyang dan kukusan untuk proses pengukusan", 
+      details: [
+        "Panaskan kukusan hingga beruap",
+        "Olesi loyang dengan margarin tipis di semua sisi",
+        "Tuang adonan ke loyang yang sudah disiapkan",
+        "Hentak-hentakan loyang agar adonan padat dan rata"
+      ], 
+      icon: <Package className="w-8 h-8" />, 
+      color: "from-gray-500 to-gray-600"
+    },
+    { 
+      title: "Proses Mengukus", 
+      description: "Mengukus brownies selama 30 menit dengan api kecil", 
+      details: [
+        "Setelah kukusan beruap, kecilkan api",
+        "Masukkan loyang dan kukus selama 30 menit",
+        "Jangan buka tutup kukusan selama proses",
+        "Tes tusuk untuk memastikan kematangan"
+      ], 
+      icon: <Timer className="w-8 h-8" />, 
+      color: "from-red-500 to-pink-600"
+    },
+    { 
+      title: "Penyelesaian & Penyajian", 
+      description: "Mendinginkan, memotong, dan menyajikan brownies yang sudah matang", 
+      details: [
+        "Angkat brownies setelah matang sempurna",
+        "Keluarkan dari cetakan dengan hati-hati",
+        "Dinginkan pada suhu ruang",
+        "Potong-potong sesuai selera lalu sajikan"
+      ], 
+      icon: <Utensils className="w-8 h-8" />, 
+      color: "from-amber-500 to-orange-600"
+    }
   ];
 
   useEffect(() => {
@@ -151,15 +189,15 @@ function ProcessTimeline() {
         <h3 className="text-4xl font-black text-gray-800 mb-4">
           Proses Pembuatan
           <span className="block bg-gradient-to-r from-amber-600 to-orange-500 bg-clip-text text-transparent">
-            Brownies Premium
+            Brownies Singkong Coklat
           </span>
         </h3>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Setiap langkah dikerjakan dengan teliti untuk menghasilkan brownies singkong terbaik.
+          Setiap langkah dikerjakan dengan teliti untuk menghasilkan brownies singkong coklat yang lezat dan berkualitas.
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-4xl mx-auto">
         <div className="space-y-6">
           {steps.map((step, index) => (
             <div
@@ -177,10 +215,10 @@ function ProcessTimeline() {
                   </h4>
                   <p className="text-gray-600 mb-3">{step.description}</p>
                   {activeStep === index && (
-                    <ul className="space-y-1">
+                    <ul className="space-y-2 mt-4">
                       {step.details.map((detail, detailIndex) => (
                         <li key={detailIndex} className="flex items-center gap-2 text-sm text-gray-700">
-                          <div className="w-1.5 h-1.5 bg-amber-500 rounded-full"></div>
+                          <div className="w-1.5 h-1.5 bg-amber-500 rounded-full flex-shrink-0"></div>
                           {detail}
                         </li>
                       ))}
@@ -191,62 +229,30 @@ function ProcessTimeline() {
             </div>
           ))}
         </div>
-
-        <div className="relative">
-          <div className="relative overflow-hidden rounded-3xl shadow-2xl">
-            <img
-              src={steps[activeStep].image}
-              alt={steps[activeStep].title}
-              className="w-full h-96 object-cover transition-all duration-500"
+        
+        <div className="flex justify-center gap-2 mt-8">
+          {steps.map((_, index) => (
+            <button
+              key={index}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${activeStep === index ? 'bg-amber-500 w-8' : 'bg-gray-300 hover:bg-gray-400'}`}
+              onClick={() => setActiveStep(index)}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-            <div className="absolute bottom-6 left-6 right-6">
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6">
-                <h4 className="text-2xl font-bold text-gray-900 mb-2">{steps[activeStep].title}</h4>
-                <p className="text-gray-700">{steps[activeStep].description}</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="flex justify-center gap-2 mt-6">
-            {steps.map((_, index) => (
-              <button
-                key={index}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${activeStep === index ? 'bg-amber-500 w-8' : 'bg-gray-300 hover:bg-gray-400'}`}
-                onClick={() => setActiveStep(index)}
-              />
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </div>
   );
 }
 
-// Interactive Gallery
 function InteractiveGallery() {
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const categories = [
-    { id: 'all', label: 'Semua', icon: <Heart className="w-4 h-4" /> },
-    { id: 'product', label: 'Produk', icon: <Package className="w-4 h-4" /> },
-    { id: 'process', label: 'Proses', icon: <ChefHat className="w-4 h-4" /> },
-    { id: 'packaging', label: 'Kemasan', icon: <Award className="w-4 h-4" /> }
-  ];
-
   const images = [
-    { src: 'https://images.unsplash.com/photo-1587668178277-295251f432ce?w=400&h=400&fit=crop', category: 'product', title: 'Brownies Singkong Premium' },
-    { src: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=400&fit=crop', category: 'product', title: 'Tekstur Lembut' },
-    { src: 'https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=400&h=400&fit=crop', category: 'process', title: 'Proses Pencampuran' },
-    { src: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=400&fit=crop', category: 'process', title: 'Tahap Pengolahan' },
-    { src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=400&fit=crop', category: 'packaging', title: 'Kemasan Premium' },
-    { src: 'https://images.unsplash.com/photo-1582169296801-56e4eaa3d9cc?w=400&h=400&fit=crop', category: 'process', title: 'Bahan Baku Singkong' }
+    { src: 'https://assets.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/akurat/images/2023/01/big/img_63c8c4c2088523-36692799-85309801.jpg' },
+    { src: 'https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/bisnisbandung/2018/04/bronis-1.jpg' },
+    { src: 'https://img-global.cpcdn.com/recipes/508090b3959f7f5c/200x200cq80/fudgy-brownies-almond-foto-resep-utama.jpg' },
+    { src: 'https://kioskcokelat.com/cdn/shop/articles/img-1738409391906_5d19c81c-dfae-41ae-bc6c-630ad7cbc847_1200x.jpg?v=1745814253' },
+    { src: 'https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/1005/2024/03/18/brownies-singkong-pisang-kukus-3338205231.jpg' },
+    { src: 'https://www.jagel.id/api/listimage/v/Brownies-Coklat-Toping-Almond-dan-Chocochips-1-3975e09fb712cdb5.jpg' }
   ];
-
-  const filteredImages = selectedCategory === 'all' 
-    ? images 
-    : images.filter(img => img.category === selectedCategory);
 
   return (
     <div className="bg-gradient-to-br from-green-50 to-white rounded-3xl shadow-xl border border-gray-100 p-8 md:p-12">
@@ -262,29 +268,11 @@ function InteractiveGallery() {
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-4 mb-12">
-        {categories.map((category) => (
-          <button
-            key={category.id}
-            onClick={() => setSelectedCategory(category.id)}
-            className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-              selectedCategory === category.id
-                ? 'bg-green-800 text-white shadow-lg transform scale-105'
-                : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md hover:shadow-lg'
-            }`}
-          >
-            {category.icon}
-            {category.label}
-          </button>
-        ))}
-      </div>
-
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {filteredImages.map((image, index) => (
+        {images.map((image, index) => (
           <div
             key={index}
-            className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:scale-105"
-            onClick={() => setSelectedImage(image)}
+            className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105"
           >
             <div className="aspect-square overflow-hidden">
               <img 
@@ -296,91 +284,68 @@ function InteractiveGallery() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div className="absolute bottom-4 left-4 right-4">
                 <h4 className="text-white font-bold text-sm mb-2">{image.title}</h4>
-                <div className="flex items-center justify-between">
-                  <span className="text-white/80 text-xs capitalize">{image.category}</span>
-                  <ZoomIn className="w-5 h-5 text-white" />
-                </div>
               </div>
             </div>
           </div>
         ))}
       </div>
+    </div>
+  );
+}
 
-      {selectedImage && (
-        <div 
-          className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <div className="relative max-w-4xl w-full bg-white rounded-3xl overflow-hidden shadow-2xl">
-            <img 
-              src={selectedImage.src} 
-              alt={selectedImage.title} 
-              className="w-full h-auto max-h-[80vh] object-contain" 
-            />
-            <div className="p-6 bg-gray-50 border-t">
-              <h4 className="text-2xl font-bold text-gray-900 mb-2">{selectedImage.title}</h4>
-              <p className="text-gray-600 capitalize">Kategori: {selectedImage.category}</p>
-            </div>
-            <button
-              onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 p-3 bg-white rounded-full shadow-lg hover:bg-gray-100 transition-all duration-300"
-            >
-              <X className="w-6 h-6 text-gray-800" />
-            </button>
-          </div>
-        </div>
-      )}
+// Tab Navigation Component
+function TabNavigation({ activeTab, setActiveTab }) {
+  const tabs = [
+    { id: 'pertanian', label: 'Hasil Tani Unggulan', icon: <Leaf className="w-5 h-5" /> },
+    { id: 'gethuk', label: 'Inovasi Produk', icon: <Heart className="w-5 h-5" /> },
+    { id: 'proker', label: 'Hasil Proker Kami', icon: <Users className="w-5 h-5" /> }
+  ];
+
+  return (
+    <div className="flex flex-wrap justify-center gap-4 mb-10">
+      {tabs.map((tab) => {
+        const isActive = activeTab === tab.id;
+        return (
+          <button
+            key={tab.id}
+            onClick={() => setActiveTab(tab.id)}
+            className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 transform ${
+              isActive
+                ? 'bg-green-600 text-white shadow-lg scale-105'
+                : 'bg-white text-green-600 hover:bg-green-50 shadow-md'
+            }`}
+          >
+            {tab.icon}
+            {tab.label}
+          </button>
+        );
+      })}
     </div>
   );
 }
 
 // Main Component
 function InovasiProduk() {
-  const [activeTab, setActiveTab] = useState('gethuk'); // Diubah agar sesuai dengan id tab
-
-  const tabs = [
-    { id: 'pertanian', label: 'Hasil Tani Unggulan', icon: <Leaf className="w-5 h-5" />, path: '/potensi/pertanian' },
-    { id: 'gethuk', label: 'Inovasi Produk', icon: <Heart className="w-5 h-5" />, path: '/potensi/InovasiProduk' },
-    { id: 'proker', label: 'Hasil Proker Kami', icon: <Users className="w-5 h-5" />, path: '/potensi/HasilProkerKami' }
-  ];
+  const [activeTab, setActiveTab] = useState('gethuk');
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
       <Navbar />
       
-      {/* --- HEADER BARU YANG DISESUAIKAN --- */}
+      {/* Header */}
       <div className="bg-white shadow-lg">
-      <div className="max-w-6xl mx-auto mt-16 px-6 py-8">
-        <h1 className="text-4xl text-center font-bold text-green-800 mb-4">
-                Inovasi Produk Unggulan
-            </h1>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Menghadirkan inovasi brownies singkong coklat premium yang memadukan kearifan lokal dengan cita rasa modern untuk kemajuan ekonomi desa.
-            </p>
+        <div className="max-w-6xl mx-auto mt-16 px-6 py-8">
+          <h1 className="text-4xl text-center font-bold text-green-800 mb-4">
+            Inovasi Produk Unggulan
+          </h1>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto text-center">
+            Menghadirkan inovasi brownies singkong coklat premium yang memadukan kearifan lokal dengan cita rasa modern untuk kemajuan ekonomi desa.
+          </p>
         </div>
       </div>
 
       <main className="max-w-6xl mx-auto px-6 py-8">
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
-          {tabs.map((tab) => {
-            const isActive = activeTab === tab.id;
-            return (
-              <Link
-                key={tab.id}
-                to={tab.path}
-                onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 transform ${
-                  isActive
-                    ? 'bg-green-600 text-white shadow-lg scale-105'
-                    : 'bg-white text-green-600 hover:bg-green-50 shadow-md'
-                }`}
-              >
-                {tab.icon}
-                {tab.label}
-              </Link>
-            );
-          })}
-        </div>
+        <TabNavigation activeTab={activeTab} setActiveTab={setActiveTab} />
 
         <div className="space-y-16">
           <ProductShowcase />
