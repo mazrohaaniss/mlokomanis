@@ -60,7 +60,7 @@ function ProductShowcase() {
           <div className="relative bg-gradient-to-br from-amber-400 to-orange-400 rounded-3xl p-8 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
             <div className="bg-white rounded-2xl p-6 shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1587668178277-295251f432ce?w=500&h=400&fit=crop"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjp9Lbak1TWVWNdVvXdgLnxlWohfp4h1lBdg&s"
                 alt="Brownies Singkong Premium"
                 className="w-full h-80 object-cover rounded-xl shadow-lg"
               />

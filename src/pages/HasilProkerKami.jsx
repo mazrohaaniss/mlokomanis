@@ -6,13 +6,29 @@ import { Link } from 'react-router-dom';
 
 // Komponen Konten: Detail Hasil Program Kerja
 function HasilProkerContent() {
-
   const handlePromotion = (platform) => {
     if (platform === 'whatsapp') {
-      // Menyesuaikan nama desa agar konsisten
       window.open('https://wa.me/6289646303500?text=Halo, saya tertarik untuk berkolaborasi dalam program kerja di Desa Mlokomanis Wetan.', '_blank');
     }
   };
+
+  // Dummy image placeholders for maps (replace with actual map image URLs)
+  const mapImages = [
+    { src: '/path/to/map1.jpg', alt: 'Peta Lahan Pertanian', caption: 'Peta Sebaran Lahan Pertanian' },
+    { src: '/path/to/map2.jpg', alt: 'Peta Zona Budidaya', caption: 'Peta Zona Budidaya' },
+    { src: '/path/to/map3.jpg', alt: 'Peta Lokasi Pemasaran', caption: 'Peta Lokasi Pemasaran' },
+    { src: '/path/to/map4.jpg', alt: 'Peta Infrastruktur Desa', caption: 'Peta Infrastruktur Desa' },
+  ];
+
+  // Dummy gallery images (replace with actual gallery image URLs)
+  const galleryImages = [
+    { src: '/path/to/gallery1.jpg', alt: 'Kegiatan Pertanian 1', caption: 'Kegiatan Panen Raya' },
+    { src: '/path/to/gallery2.jpg', alt: 'Kegiatan Pertanian 2', caption: 'Pelatihan Petani' },
+    { src: '/path/to/gallery3.jpg', alt: 'Kegiatan Pertanian 3', caption: 'Inovasi Produk Tani' },
+    { src: '/path/to/gallery4.jpg', alt: 'Kegiatan Pertanian 4', caption: 'Pameran Hasil Tani' },
+    { src: '/path/to/gallery5.jpg', alt: 'Kegiatan Pertanian 5', caption: 'Kunjungan Lapangan' },
+    { src: '/path/to/gallery6.jpg', alt: 'Kegiatan Pertanian 6', caption: 'Pemeliharaan Lahan' },
+  ];
 
   return (
     <div className="space-y-12">
@@ -95,6 +111,54 @@ function HasilProkerContent() {
           </div>
         </div>
       </div>
+
+      {/* Section: 4 Map Images */}
+      <div className="space-y-8">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-green-800 mb-2">🗺️ Peta Tematik Desa</h2>
+          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+            Koleksi peta tematik yang menggambarkan berbagai aspek potensi pertanian dan infrastruktur di Desa Mlokomanis Wetan.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {mapImages.map((map, index) => (
+            <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+              <img
+                src={map.src}
+                alt={map.alt}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <p className="text-gray-600 text-sm text-center">{map.caption}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Section: Gallery */}
+      <div className="space-y-8">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-green-800 mb-2">📸 Galeri Kegiatan</h2>
+          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+            Dokumentasi kegiatan pertanian, pelatihan, dan inovasi yang dilakukan oleh masyarakat Desa Mlokomanis Wetan.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {galleryImages.map((image, index) => (
+            <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <p className="text-gray-600 text-sm text-center">{image.caption}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
@@ -123,7 +187,7 @@ function HasilProkerKami() {
         <div className="flex flex-wrap justify-center gap-4 mb-10">
           {[
             { id: 'pertanian', label: 'Hasil Tani Unggulan', icon: <Leaf className="w-5 h-5" />, path: '/potensi/pertanian' },
-    { id: 'gethuk', label: 'Inovasi Produk', icon: <Heart className="w-5 h-5" />, path: '/potensi/InovasiProduk' },
+            { id: 'gethuk', label: 'Inovasi Produk', icon: <Heart className="w-5 h-5" />, path: '/potensi/InovasiProduk' },
             { id: 'proker', label: 'Hasil Proker Kami', icon: <Users className="w-5 h-5" />, path: '/potensi/HasilProkerKami' }
           ].map((tab) => {
             const isActive = activeTab === tab.id;
