@@ -69,15 +69,15 @@ function HasilProkerContent() {
             </div>
           </div>
           <div className="p-6 flex flex-col flex-grow">
-            <h3 className="text-xl font-bold text-green-800 mb-3">Buku Panduan Digital</h3>
+            <h3 className="text-xl font-bold text-green-800 mb-3">Buku Masterplan</h3>
             <p className="text-gray-600 mb-4 text-sm flex-grow">
-              Panduan lengkap budidaya dan pengolahan hasil tani yang dapat diunduh gratis untuk meningkatkan pengetahuan petani.
+             Panduan ini menjadi acuan praktis bagi petani untuk meningkatkan produktivitas dan nilai tambah hasil tani melalui teknik budidaya dan pengolahan yang tepat guna..
             </p>
             <button 
               onClick={() => {
                 const link = document.createElement('a');
-                link.href = '/path/to/your/ebook.pdf'; // Ganti dengan path file PDF Anda
-                link.download = 'Panduan-Pertanian-Desa-Mlokomanis-Wetan.pdf';
+                link.href = '/dokumen/masterplan.pdf'; // Ganti dengan path file PDF Anda
+                link.download = 'Buku-Masterplan-Petani-Milenial.pdf';
                 link.click();
               }}
               className="mt-auto w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white px-4 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
@@ -87,6 +87,7 @@ function HasilProkerContent() {
             </button>
           </div>
         </div>
+
 
         {/* Card: Peta Digital */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col">

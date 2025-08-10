@@ -56,31 +56,32 @@ function ProductShowcase() {
         </div>
 
         {/* Product Visual */}
-        <div className="relative">
-          <div className="relative bg-gradient-to-br from-amber-400 to-orange-400 rounded-3xl p-8 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
-            <div className="bg-white rounded-2xl p-6 shadow-xl">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjp9Lbak1TWVWNdVvXdgLnxlWohfp4h1lBdg&s"
-                alt="Brownies Singkong Premium"
-                className="w-full h-80 object-cover rounded-xl shadow-lg"
-              />
-            </div>
-          </div>
-          
-          <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center shadow-2xl animate-bounce">
-            <span className="text-white font-black text-sm">BARU!</span>
-          </div>
-          
-          <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl p-4 shadow-2xl">
-            <div className="flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-500" />
-              <div>
-                <div className="font-bold text-gray-900">Chef's Choice</div>
-                <div className="text-sm text-gray-600">Resep Rahasia</div>
-              </div>
-            </div>
-          </div>
-        </div>
+<div className="relative">
+  <div className="relative bg-gradient-to-br from-amber-400 to-orange-400 rounded-3xl p-8 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+    <div className="bg-white rounded-2xl p-6 shadow-xl">
+      <img
+        src="/images/resep.png"
+        alt="Brownies Singkong Premium"
+        className="w-full h-80 object-cover rounded-xl shadow-lg"
+      />
+    </div>
+  </div>
+
+  <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center shadow-2xl animate-bounce">
+    <span className="text-white font-black text-sm">BARU!</span>
+  </div>
+
+  <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl p-4 shadow-2xl">
+    <div className="flex items-center gap-2">
+      <ChefHat className="w-6 h-6 text-orange-500" />
+      <div>
+        <div className="font-bold text-gray-900">Chef's Choice</div>
+        <div className="text-sm text-gray-600">Resep Rahasia</div>
+      </div>
+    </div>
+  </div>
+</div>
+
       </div>
     </div>
   );
