@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ChevronRight, Music, Users, Calendar, X, ChevronLeft, User, Camera } from "lucide-react";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSectionKw";
 import PosterSection from "../components/EventSectionKw";
