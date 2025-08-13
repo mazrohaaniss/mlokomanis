@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom'; 
 import { Instagram, MessageCircle, Clock, ShoppingCart, Heart, ExternalLink, Leaf, Users, ZoomIn, X, Star, Award, Sparkles, ChefHat, Package, Truck, ArrowRight, Flame, Zap, Timer, Utensils } from 'lucide-react';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/navbar';
 import Footer from '../components/Footer';
 
 // Product Showcase Component
