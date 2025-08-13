@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Leaf, Heart, Users, ExternalLink } from 'lucide-react';
-import Navbar from '../components/navbar';
+import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 
