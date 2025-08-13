@@ -142,7 +142,7 @@ function HasilProkerContent() {
       {/* Section: 4 Map Images */}
       <div className="space-y-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-green-800 mb-2">🗺️ Peta Tematik Desa</h2>
+          <h2 className="text-3xl font-bold text-green-800 mb-2">🗺 Peta Tematik Desa</h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
             Koleksi peta tematik yang menggambarkan berbagai aspek potensi pertanian dan infrastruktur di Desa Mlokomanis Wetan.
           </p>
