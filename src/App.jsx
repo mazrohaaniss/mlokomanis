@@ -1,4 +1,4 @@
-  import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import Pertanian from './pages/Pertanian';
 import InovasiProduk from './pages/InovasiProduk';

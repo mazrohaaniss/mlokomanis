@@ -77,7 +77,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center space-x-3">
-              <img src="/logo-desa.png" alt="Logo Desa" className="h-9 w-9" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Seal_of_Wonogiri_Regency.svg/1200px-Seal_of_Wonogiri_Regency.svg.png" alt="Logo Desa" className="h-9 w-9" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
               <div className="w-9 h-9 bg-gray-300 rounded-full hidden"></div>
               <span className="text-white text-xl font-bold">Mlokomanis Wetan</span>
             </Link>

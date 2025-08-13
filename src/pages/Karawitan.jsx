@@ -1,25 +1,30 @@
 import React, { useState } from "react";
-import { ChevronRight, Music, Users, Calendar, X, ChevronLeft } from "lucide-react";
+import { ChevronRight, Music, Users, Calendar, X, ChevronLeft, User, Camera } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import HeroSection from "../components/HeroSectionKw";
+import PosterSection from "../components/EventSectionKw";
+import TentangKamiSection from "../components/ProfileKw";
+import GaleriKegiatanSection from "../components/GaleriKw";
+import ArtikelKarawitanSection from "../components/ArtikelKw";
 
 const testimonials = [
   {
     quote: "Karawitan bukan sekadar musik, tetapi jiwa dari peradaban Jawa. Setiap nada membawa cerita leluhur, setiap irama mengajarkan kesabaran dan keharmonisan hidup.",
     author: "Mbah Karimo",
-    role: "PEMBINA & MAESTRO",
+    role: "Pembina",
     image:"/images/tokoh karawitan/Mbah Karimo.png"
   },
   {
-    quote: "Musik gamelan adalah jembatan antara tradisi dan modernitas, menghubungkan generasi dengan keindahan budaya.",
-    author: "Sri",
-    role: "PENYANYI",
+    quote: "Dengan mendengarkan alunan Karawitan serasa muda kembali nan menambah umur lebih panjang.",
+    author: "Bu Sri",
+    role: "Penyanyi",
     image:"/images/tokoh karawitan/BuSri.png"
   },
   {
-    quote: "Jadi Gini.",
-    author: "Kak Arsyad",
-    role: "DPL",
+    quote: "Sebagai koordinator desa tim KKN disini, saya berharap banyak pada karawitan Mulyo Laras untuk melestarikan budaya bangsa kepada generasi muda.",
+    author: "Arsyad Azharuddin",
+    role: "Koordinator Desa",
     image:"/images/tokoh karawitan/arsyad.jpg"
   },
 ];
@@ -102,11 +107,9 @@ const instruments = [
 const documentationItems = [
   { title: "Latihan Sanggar Larasswara", image: "/images/dokum/latianls.png" },
   { title: "Latihan Karawitan Kelompok 3 KKNT 6", image: "/images/dokum/taliank3.png" },
-  { title: "Workshop Pengenalan Karawitan Kepada Murid SD Negeri 2 Mlokowetan", image: "/images/workshopsd.png" },
-  { title: "Diskusi Persiapan Malam Puncak", image: "/images/PembahasanMalpun.png" },
-  { title: "Latihan Karawitan Murid SD", image: "/images/latiansd.png" },
-  { title: "Workshop Kesehatan Psikis dalam Karawitan", image: "/images/Kesehatan.png" },
+  { title: "Workshop Pengenalan Karawitan Kepada Murid SD Negeri 2 Mlokowetan", image: "/images/dokum/workshopsd.png" },
 ];
+
 
 function TestimonialsContent() {
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
@@ -140,112 +143,111 @@ function TestimonialsContent() {
   };
 
   return (
-    <div className="space-y-12">
-      <section>
-        <h2 className="text-3xl font-bold text-green-800 mb-8 pb-2 border-b-2 border-green-200 text-center">
-          Suara-Suara Maestro Karawitan
-        </h2>
-        
-        {/* Main Carousel Card with Side Navigation */}
-        <div className="relative max-w-7xl mx-auto mb-8 flex items-center gap-6">
-          {/* Previous Button - Left Side */}
-          <button 
-            className="group bg-white hover:bg-green-50 p-4 rounded-full shadow-lg hover:shadow-xl text-green-600 hover:text-green-700 transition-all duration-300 transform hover:scale-110 border border-green-100 disabled:opacity-50 disabled:cursor-not-allowed flex-shrink-0"
-            onClick={prevTestimonial}
-            disabled={isSliding}
-          >
-            <ChevronLeft className="w-8 h-8 group-hover:-translate-x-1 transition-transform duration-300" />
-          </button>
+<div className="space-y-12 mt-20">
+  <section className="px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl sm:text-4xl font-bold text-green-800 mb-8 pb-2 border-b-2 border-green-100 text-center">
+      Tokoh Karawitan Mulyo Laras
+    </h2>
 
-          {/* Main Card Container */}
-          <div className="flex-1 overflow-hidden">
-            <div 
-              className={`transition-all duration-500 ease-in-out ${
-                isSliding ? 'opacity-60 scale-95 blur-sm' : 'opacity-100 scale-100 blur-0'
-              }`}
-            >
-              <div className="bg-gradient-to-br from-white via-green-50 to-emerald-50 rounded-2xl shadow-2xl overflow-hidden border border-green-100">
-                {/* Decorative Elements */}
-                <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-green-200/30 to-transparent rounded-full -translate-x-16 -translate-y-16"></div>
-                <div className="absolute bottom-0 right-0 w-40 h-40 bg-gradient-to-tl from-emerald-200/30 to-transparent rounded-full translate-x-20 translate-y-20"></div>
-                
-                <div className="relative p-8 md:p-12">
-                  {/* Profile Section */}
-                  <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
-                    <div className="relative group">
-                      <div className="absolute -inset-1 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full opacity-75 group-hover:opacity-100 blur transition duration-300"></div>
-                      <img
-                        src={testimonials[currentTestimonialIndex].image}
-                        alt={testimonials[currentTestimonialIndex].author}
-                        className="relative w-32 h-32 object-cover rounded-full border-4 border-white shadow-xl group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg">
-                        <Music className="w-4 h-4 text-white" />
-                      </div>
-                    </div>
-                    
-                    <div className="text-center md:text-left">
-                      <h3 className="text-2xl md:text-3xl font-bold text-green-900 mb-2">
-                        {testimonials[currentTestimonialIndex].author}
-                      </h3>
-                      <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-100 to-emerald-100 rounded-full">
-                        <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
-                        <p className="text-green-800 font-semibold text-sm md:text-base uppercase tracking-wider">
-                          {testimonials[currentTestimonialIndex].role}
-                        </p>
-                      </div>
-                    </div>
+    {/* Main Carousel Card with Side Navigation */}
+    <div className="relative max-w-7xl mx-auto mb-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+      {/* Previous Button - Left Side */}
+      <button 
+        className="group bg-white hover:bg-green-100 p-3 sm:p-4 rounded-full shadow-lg hover:shadow-xl text-green-600 hover:text-green-700 transition-all duration-300 transform hover:scale-110 border border-green-100 disabled:opacity-50 disabled:cursor-not-allowed shrink-0"
+        onClick={prevTestimonial}
+        disabled={isSliding}
+      >
+        <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8 group-hover:-translate-x-1 transition-transform duration-300" />
+      </button>
+
+      {/* Main Card Container */}
+      <div className="flex-1 min-w-[280px] max-w-[800px] overflow-hidden">
+        <div 
+          className={`transition-all duration-500 ease-in-out ${
+            isSliding ? 'opacity-60 scale-95 blur-sm' : 'opacity-100 scale-100 blur-0'
+          }`}
+        >
+          <div className="bg-[#dcfce7] rounded-2xl shadow-2xl overflow-hidden border border-green-100 relative">
+            {/* Decorative Elements */}
+            <div className="absolute top-0 left-0 w-20 sm:w-32 h-20 sm:h-32 bg-green-200/30 rounded-full -translate-x-10 sm:-translate-x-16 -translate-y-10 sm:-translate-y-16"></div>
+            <div className="absolute bottom-0 right-0 w-24 sm:w-40 h-24 sm:h-40 bg-emerald-200/30 rounded-full translate-x-10 sm:translate-x-20 translate-y-10 sm:translate-y-20"></div>
+            
+            <div className="relative p-6 sm:p-8 md:p-12">
+              {/* Profile Section */}
+              <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-8 mb-8">
+                <div className="relative group">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full opacity-75 group-hover:opacity-100 blur transition duration-300"></div>
+                  <img
+                    src={testimonials[currentTestimonialIndex].image}
+                    alt={testimonials[currentTestimonialIndex].author}
+                    className="relative w-24 sm:w-28 md:w-32 h-24 sm:h-28 md:h-32 object-cover rounded-full border-4 border-white shadow-xl group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute -bottom-2 -right-2 w-6 sm:w-8 h-6 sm:h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg">
+                    <Music className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                   </div>
-
-                  {/* Quote Section */}
-                  <div className="relative">
-                    <div className="absolute -top-4 -left-4 text-8xl text-green-300/50 font-serif leading-none select-none">
-                      &ldquo;
-                    </div>
-                    <div className="absolute -bottom-8 -right-4 text-8xl text-green-300/50 font-serif leading-none select-none">
-                      &rdquo;
-                    </div>
-                    
-                    <blockquote className="relative text-center text-gray-800 text-lg md:text-xl lg:text-2xl leading-relaxed font-medium italic px-8 py-4">
-                      {testimonials[currentTestimonialIndex].quote}
-                    </blockquote>
+                </div>
+                
+                <div className="text-center md:text-left">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-green-900 mb-2">
+                    {testimonials[currentTestimonialIndex].author}
+                  </h3>
+                  <div className="inline-flex items-center px-3 sm:px-4 py-1 sm:py-2 bg-gradient-to-r from-green-100 to-emerald-100 rounded-full">
+                    <div className="w-2 h-2 bg-green-100 rounded-full mr-2 animate-pulse"></div>
+                    <p className="text-green-800 font-semibold text-xs sm:text-sm md:text-base uppercase tracking-wider">
+                      {testimonials[currentTestimonialIndex].role}
+                    </p>
                   </div>
                 </div>
               </div>
+
+              {/* Quote Section */}
+              <div className="relative">
+                <div className="absolute -top-4 -left-4 text-6xl sm:text-8xl text-green-300/50 font-serif leading-none select-none">
+                  &ldquo;
+                </div>
+                <div className="absolute -bottom-8 -right-4 text-6xl sm:text-8xl text-green-300/50 font-serif leading-none select-none">
+                  &rdquo;
+                </div>
+                
+                <blockquote className="relative text-center text-gray-800 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed font-medium italic px-4 sm:px-8 py-4">
+                  {testimonials[currentTestimonialIndex].quote}
+                </blockquote>
+              </div>
             </div>
           </div>
-
-          {/* Next Button - Right Side */}
-          <button 
-            className="group bg-white hover:bg-green-50 p-4 rounded-full shadow-lg hover:shadow-xl text-green-600 hover:text-green-700 transition-all duration-300 transform hover:scale-110 border border-green-100 disabled:opacity-50 disabled:cursor-not-allowed flex-shrink-0"
-            onClick={nextTestimonial}
-            disabled={isSliding}
-          >
-            <ChevronRight className="w-8 h-8 group-hover:translate-x-1 transition-transform duration-300" />
-          </button>
         </div>
+      </div>
 
-        {/* Navigation Indicators */}
-        <div className="flex flex-col items-center gap-6">
-          {/* Dots Indicator */}
-          <div className="flex space-x-3">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                className={`w-3 h-3 rounded-full transition-all duration-300 disabled:cursor-not-allowed ${
-                  index === currentTestimonialIndex
-                    ? 'bg-gradient-to-r from-green-500 to-emerald-500 scale-125 shadow-lg'
-                    : 'bg-green-200 hover:bg-green-300'
-                }`}
-                onClick={() => goToTestimonial(index)}
-                disabled={isSliding}
-              />
-            ))}
-          </div>
-        </div>
-
-      </section>
+      {/* Next Button - Right Side */}
+      <button 
+    className="group bg-white hover:bg-green-100 w-10 h-10 sm:w-12 sm:h-12 rounded-full shadow-lg hover:shadow-xl text-green-600 hover:text-green-700 transition-all duration-300 transform hover:scale-110 border border-green-100 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center shrink-0"
+    onClick={nextTestimonial}
+    disabled={isSliding}
+  >
+    <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform duration-300" />
+  </button>
     </div>
+
+    {/* Navigation Indicators */}
+    <div className="flex flex-col items-center gap-6">
+      <div className="flex space-x-3">
+        {testimonials.map((_, index) => (
+          <button
+            key={index}
+            className={`w-3 h-3 rounded-full transition-all duration-300 disabled:cursor-not-allowed ${
+              index === currentTestimonialIndex
+                ? 'bg-gradient-to-r from-green-700 to-emerald-700 scale-125 shadow-lg'
+                : 'bg-green-400 hover:bg-green-600'
+            }`}
+            onClick={() => goToTestimonial(index)}
+            disabled={isSliding}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</div>
+
   );
 }
 
@@ -263,8 +265,8 @@ function InstrumentsContent() {
   return (
     <div className="space-y-12">
       <section>
-        <h2 className="text-3xl font-bold text-green-800 mb-6 pb-2 border-b-2 border-green-200">
-          Alat Musik Gamelan
+        <h2 className="text-right text-3xl font-bold text-green-800 mb-6 pb-2 border-b-2 border-green-200">
+          Gamelan Kami
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {instruments.map((instrument) => (
@@ -354,7 +356,7 @@ function DocumentationContent() {
     <div className="space-y-12">
       <section>
         <h2 className="text-3xl font-bold text-green-800 mb-6 pb-2 border-b-2 border-green-200">
-          Dokumentasi Kegiatan
+          Tahu Lebih Lanjut Tentang Karawitan
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {documentationItems.map((doc, idx) => (
@@ -383,9 +385,6 @@ function DocumentationContent() {
         </div>
 
         <div className="mt-12 text-center">
-          <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-            Lihat Semua Dokumentasi
-          </button>
         </div>
       </section>
     </div>
@@ -393,12 +392,15 @@ function DocumentationContent() {
 }
 
 export default function KarawitanPage() {
-  const [activeTab, setActiveTab] = useState('tokoh');
+  const [activeTab, setActiveTab] = useState(null);
+
+
 
   const tabs = [
+    { id: 'profil', label: 'Profil', icon: <User className="w-5 h-5" /> },
     { id: 'tokoh', label: 'Tokoh Karawitan', icon: <Users className="w-5 h-5" /> },
     { id: 'instrumen', label: 'Alat Musik Gamelan', icon: <Music className="w-5 h-5" /> },
-    { id: 'dokumentasi', label: 'Dokumentasi', icon: <Calendar className="w-5 h-5" /> }
+    { id: 'dokumentasi', label: 'Galeri Visual', icon: <Camera className="w-5 h-5" /> }
   ];
 
   const renderContent = () => {
@@ -410,56 +412,36 @@ export default function KarawitanPage() {
       case 'dokumentasi':
         return <DocumentationContent />;
       default:
-        return <TestimonialsContent />;
+        return null;
     }
   };
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
-      <Navbar />
-      
-      {/* Hero Section - matching Pertanian style */}
-      <div className="bg-white shadow-lg">
-        <div className="max-w-6xl mx-auto mt-16 px-6 py-8">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-green-800 mb-4">
-              Potensi Karawitan Desa Mlokomanis Wetan
-            </h1>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Melestarikan warisan budaya gamelan Jawa melalui pembelajaran tradisional 
-              yang menghubungkan generasi dengan keindahan seni musik nusantara.
-            </p>
-          </div>
-        </div>
+return (
+  <div className="min-h-screen bg-green-50">
+    <Navbar />
+    
+    <HeroSection />
+
+    <TentangKamiSection/>
+
+    <PosterSection />
+
+    <TestimonialsContent />
+    
+    <section>
+      <div className="max-w-6xl mx-auto px-6 mt-40">
+        <DocumentationContent />
       </div>
+    </section>
 
-      <main className="max-w-6xl mx-auto px-6 py-8">
-        {/* Tab Navigation - matching Pertanian style */}
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
-          {tabs.map((tab) => {
-            const isActive = activeTab === tab.id;
-            return (
-              <button
-                key={tab.id}
-                className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 transform ${
-                  isActive
-                    ? 'bg-green-600 text-white shadow-lg scale-105'
-                    : 'bg-white text-green-600 hover:bg-green-50 shadow-md hover:shadow-lg'
-                }`}
-                onClick={() => setActiveTab(tab.id)}
-              >
-                {tab.icon}
-                {tab.label}
-              </button>
-            );
-          })}
-        </div>
+    <GaleriKegiatanSection/>
 
-        {/* Content */}
-        {renderContent()}
-      </main>
-      
-      <Footer />
-    </div>
-  );
+    <section className="max-w-6xl mx-auto px-6 py-8 mb-30">
+      <InstrumentsContent />
+    </section>
+
+    <Footer />
+  </div>
+);
+
 }
