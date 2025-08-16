@@ -4,7 +4,6 @@ import { Instagram, MessageCircle, Clock, ShoppingCart, Heart, ExternalLink, Lea
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-// Product Showcase Component
 function ProductShowcase() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-amber-50 to-white rounded-3xl shadow-xl border border-gray-100">
@@ -53,35 +52,55 @@ function ProductShowcase() {
               </div>
             </div>
           </div>
+
+          {/* Instagram Call-to-Action - Moved here for better flow */}
+         <div className="bg-gradient-to-r from-green-500 to-emerald-500 p-4 rounded-xl shadow-md">
+  <div className="flex items-center justify-between text-white">
+    <div className="flex items-center gap-3">
+      <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
+        <Instagram className="w-5 h-5 text-white" />
+      </div>
+      <div>
+        <h4 className="font-semibold text-base">Follow Kami</h4>
+        <p className="text-white/90 text-xs">@cassacoa.bakery</p>
+      </div>
+    </div>
+    <button 
+      onClick={() => window.open('https://www.instagram.com/cassacoa.bakery?igsh=NTdobHpidWFxNm1u', '_blank')}
+      className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-gradient-to-r hover:from-green-700 hover:to-emerald-700 transition-all duration-300 shadow-md hover:shadow-lg"
+    >
+      Follow
+    </button>
+  </div>
+</div>
         </div>
 
         {/* Product Visual */}
-<div className="relative">
-  <div className="relative bg-gradient-to-br from-amber-400 to-orange-400 rounded-3xl p-8 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
-    <div className="bg-white rounded-2xl p-6 shadow-xl">
-      <img
-        src="/images/brownie.png"
-        alt="Brownies Singkong Premium"
-        className="w-full h-80 object-cover rounded-xl shadow-lg"
-      />
-    </div>
-  </div>
+        <div className="relative">
+          <div className="relative bg-gradient-to-br from-amber-400 to-orange-400 rounded-3xl p-8 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+            <div className="bg-white rounded-2xl p-6 shadow-xl">
+              <img
+                src="/images/brownie.png"
+                alt="Brownies Singkong Premium Coklat"
+                className="w-full h-80 object-cover rounded-xl shadow-lg"
+              />
+            </div>
+          </div>
 
-  <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center shadow-2xl animate-bounce">
-    <span className="text-white font-black text-sm">BARU!</span>
-  </div>
+          <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center shadow-2xl animate-bounce">
+            <span className="text-white font-black text-sm">BARU!</span>
+          </div>
 
-  <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl p-4 shadow-2xl">
-    <div className="flex items-center gap-2">
-      <ChefHat className="w-6 h-6 text-orange-500" />
-      <div>
-        <div className="font-bold text-gray-900">Chef's Choice</div>
-        <div className="text-sm text-gray-600">Resep Rahasia</div>
-      </div>
-    </div>
-  </div>
-</div>
-
+          <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl p-4 shadow-2xl">
+            <div className="flex items-center gap-2">
+              <ChefHat className="w-6 h-6 text-orange-500" />
+              <div>
+                <div className="font-bold text-gray-900">Chef's Choice</div>
+                <div className="text-sm text-gray-600">Resep Rahasia</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
