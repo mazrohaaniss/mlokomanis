@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Leaf, Heart, Users, ExternalLink } from 'lucide-react';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Footer from '../components/footer';
 import { Link } from 'react-router-dom';
 
 // Komponen Modal untuk Popup Gambar dengan Background Blur
@@ -68,8 +68,8 @@ function HasilProkerContent({ openModal }) {
   <div className="group bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100/50 flex flex-col h-full">
     <div className="relative h-48 overflow-hidden rounded-t-xl">
       <img src="/images/pasha.jpg" alt="Video Profil Desa" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-      <div className="absolute top-3 left-3 bg-green-500/90 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      <div className="absolute top-3 left-3 bg-amber-500/90 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" /></svg>
         Video
@@ -81,17 +81,16 @@ function HasilProkerContent({ openModal }) {
         Dokumentasi visual lengkap tentang potensi, inovasi produk, dan kehidupan masyarakat Desa Mlokomanis Wetan.
       </p>
       <p className="text-xs text-gray-500 mb-4">
-        Dibuat oleh: <span className="font-medium text-gray-700">Rayhan Pasha Rizkal Rahayaan</span>
+        Dibuat oleh: <span className="font-semibold text-gray-700">Rayhan Pasha Rizkal Rahayaan</span>
       </p>
       <button 
         onClick={() => window.open('https://youtu.be/HLJQLt98dOQ?si=RDysefjhviWgCeg9', '_blank')}
-        className="mt-auto w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-gradient-to-r hover:from-amber-600 hover:to-orange-600 transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg"
+        className="mt-auto w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-gradient-to-r hover:from-green-600 hover:to-emerald-600 transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg"
       >
         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
         </svg>
         Tonton Video
-        
       </button>
     </div>
   </div>
@@ -114,18 +113,17 @@ function HasilProkerContent({ openModal }) {
         Panduan ini menjadi acuan praktis bagi petani untuk meningkatkan produktivitas dan nilai tambah hasil tani melalui teknik budidaya dan pengolahan yang tepat guna.
       </p>
       <p className="text-xs text-gray-500 mb-4">
-        Dibuat oleh: <span className="font-medium text-gray-700">Nonik Kusuma Wardhani</span>
+        Dibuat oleh: <span className="font-semibold text-gray-700">Nonik Kusuma Wardhani</span>
       </p>
       <button 
         onClick={() => window.open('/dokumen/masterplan.pdf', '_blank')}
-        className="mt-auto w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-gradient-to-r hover:from-amber-600 hover:to-orange-600 transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg"
+        className="mt-auto w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-gradient-to-r hover:from-green-600 hover:to-emerald-600 transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg"
       >
         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
           <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
         </svg>
         Lihat Dokumen
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          
         </svg>
       </button>
     </div>
@@ -135,7 +133,8 @@ function HasilProkerContent({ openModal }) {
   <div className="group bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100/50 flex flex-col h-full">
     <div className="relative h-48 overflow-hidden rounded-t-xl">
       <img src="/images/pertanian.jpg" alt="Pertanian Sebagai Bidang Ilmu" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-      <div className="absolute top-3 left-3 bg-green-500/90 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
+       <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      <div className="absolute top-3 left-3 bg-amber-500/90 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
           <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
         </svg>
@@ -148,18 +147,17 @@ function HasilProkerContent({ openModal }) {
         Pertanian adalah profesi bernilai luhur yang menopang ekonomi, melestarikan alam, menjaga budaya, dan membuka peluang inovasi hingga pasar global.
       </p>
       <p className="text-xs text-gray-500 mb-4">
-        Dibuat oleh: <span className="font-medium text-gray-700">Abdillah Kays</span>
+        Dibuat oleh: <span className="font-semibold text-gray-700">Abdillah Kays</span>
       </p>
       <button 
         onClick={() => window.open('/dokumen/kays.pdf', '_blank')}
-        className="mt-auto w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-gradient-to-r hover:from-amber-600 hover:to-orange-600 transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg"
+        className="mt-auto w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-gradient-to-r hover:from-green-600 hover:to-emerald-600 transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg"
       >
         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
           <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
         </svg>
         Lihat Dokumen
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          
         </svg>
       </button>
     </div>
@@ -169,6 +167,7 @@ function HasilProkerContent({ openModal }) {
   <div className="group bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100/50 flex flex-col h-full">
     <div className="relative h-48 overflow-hidden rounded-t-xl">
       <img src="/images/imam.png" alt="Folklor Pertanian" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       <div className="absolute top-3 left-3 bg-amber-500/90 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
           <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
@@ -182,18 +181,17 @@ function HasilProkerContent({ openModal }) {
         Tentang cerita, kepercayaan, dan tradisi khususnya di pertanian yang diwariskan secara turun temurun lewat lisan
       </p>
       <p className="text-xs text-gray-500 mb-4">
-        Dibuat oleh: <span className="font-medium text-gray-700">Imam Choiridho </span>
+        Dibuat oleh: <span className="font-semibold text-gray-700">Imam Choiridho </span>
       </p>
       <button 
         onClick={() => window.open('/dokumen/imam.pdf', '_blank')}
-        className="mt-auto w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-gradient-to-r hover:from-amber-600 hover:to-orange-600 transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg"
+        className="mt-auto w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-gradient-to-r hover:from-green-600 hover:to-emerald-600 transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg"
       >
         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
           <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
         </svg>
         Lihat Dokumen
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          
         </svg>
       </button>
     </div>
@@ -355,8 +353,8 @@ function HasilProkerContent({ openModal }) {
           </div>
         </div>
 
-        <div className="border-t border-gray-200 pt-4">
-          <p className="text-xs text-gray-500">
+        <div className=" pt-6">
+                <p className="text-xs text-gray-500">
             Dibuat oleh: <span className="font-semibold text-gray-700">Gabby Novelita Malik</span>
           </p>
         </div>
