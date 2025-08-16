@@ -53,26 +53,26 @@ function ProductShowcase() {
             </div>
           </div>
 
-          {/* Instagram Call-to-Action - Moved here for better flow */}
-         <div className="bg-gradient-to-r from-green-500 to-emerald-500 p-4 rounded-xl shadow-md">
-  <div className="flex items-center justify-between text-white">
-    <div className="flex items-center gap-3">
-      <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
-        <Instagram className="w-5 h-5 text-white" />
-      </div>
-      <div>
-        <h4 className="font-semibold text-base">Follow Kami</h4>
-        <p className="text-white/90 text-xs">@cassacoa.bakery</p>
-      </div>
-    </div>
-    <button 
-      onClick={() => window.open('https://www.instagram.com/cassacoa.bakery?igsh=NTdobHpidWFxNm1u', '_blank')}
-      className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-gradient-to-r hover:from-green-700 hover:to-emerald-700 transition-all duration-300 shadow-md hover:shadow-lg"
-    >
-      Follow
-    </button>
-  </div>
-</div>
+          {/* Instagram Call-to-Action */}
+          <div className="bg-gradient-to-r from-green-500 to-emerald-500 p-4 rounded-xl shadow-md">
+            <div className="flex items-center justify-between text-white">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
+                  <Instagram className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-base">Follow Kami</h4>
+                  <p className="text-white/90 text-xs">@cassacoa.bakery</p>
+                </div>
+              </div>
+              <button 
+                onClick={() => window.open('https://www.instagram.com/cassacoa.bakery?igsh=NTdobHpidWFxNm1u', '_blank')}
+                className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-gradient-to-r hover:from-green-700 hover:to-emerald-700 transition-all duration-300 shadow-md hover:shadow-lg"
+              >
+                Follow
+              </button>
+            </div>
+          </div>
         </div>
 
         {/* Product Visual */}
@@ -106,7 +106,6 @@ function ProductShowcase() {
   );
 }
 
-// Interactive Process Timeline
 function ProcessTimeline() {
   const [activeStep, setActiveStep] = useState(0);
   
@@ -313,75 +312,129 @@ function InteractiveGallery() {
     </div>
   );
 }
-// Komponen Konten Utama Halaman
-function InovasiProdukContent() {
+
+function StatisticsSection() {
+  const stats = [
+    { 
+      icon: <ShoppingCart className="w-6 h-6 text-white" />, 
+      value: "1,500+", 
+      label: "Brownies Terjual", 
+      description: "Total penjualan brownies singkong sejak diluncurkan." 
+    },
+    { 
+      icon: <Star className="w-6 h-6 text-white" />, 
+      value: "95%", 
+      label: "Kepuasan Pelanggan", 
+      description: "Tingkat kepuasan pelanggan berdasarkan ulasan." 
+    },
+    { 
+      icon: <Users className="w-6 h-6 text-white" />, 
+      value: "10+", 
+      label: "Petani Terlibat", 
+      description: "Petani lokal yang mendukung produksi singkong." 
+    },
+    { 
+      icon: <Heart className="w-6 h-6 text-white" />, 
+      value: "50+", 
+      label: "Varian Rasa", 
+      description: "Beragam varian brownies singkong yang tersedia." 
+    }
+  ];
+
   return (
-      <div className="space-y-16">
-          <ProductShowcase />
-          <ProcessTimeline />
-          <InteractiveGallery />
-      </div>
-  )
-}
-
-
-// --- Komponen Halaman Utama (Main Page Component) ---
-function InovasiProduk() {
-// State untuk mengelola tab yang aktif secara visual
-const [activeTab, setActiveTab] = useState('brownis');
-
-return (
-  <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
-    <Navbar />
-    
-    {/* Header */}
-    <div className="bg-white shadow-lg">
-      <div className="max-w-6xl mx-auto mt-16 px-6 py-8">
-        <h1 className="text-4xl text-center font-bold text-green-800 mb-4">
-          Inovasi Produk Unggulan
-        </h1>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto text-center">
-          Menghadirkan inovasi brownies singkong coklat premium yang memadukan kearifan lokal dengan cita rasa modern untuk kemajuan ekonomi desa.
+    <div className="md:hidden bg-gradient-to-br from-green-50 to-white rounded-3xl shadow-xl border border-gray-100 p-6">
+      <div className="text-center mb-6">
+        <h3 className="text-3xl font-black text-gray-800 mb-3">
+          Statistik
+          <span className="block bg-gradient-to-r from-green-700 to-green-800 bg-clip-text text-transparent">
+            Pencapaian Kami
+          </span>
+        </h3>
+        <p className="text-base text-gray-600">
+          Angka-angka yang menunjukkan dampak dan kesuksesan brownies singkong premium kami.
         </p>
       </div>
-    </div>
 
-    <main className="max-w-6xl mx-auto px-6 py-8">
-      {/* --- Logika Navigasi diletakkan langsung di sini --- */}
-      <div className="flex flex-wrap justify-center gap-4 mb-10">
-        {[
-          { id: 'pertanian', label: 'Hasil Tani Unggulan', icon: <Leaf className="w-5 h-5" />, path: '/potensi/pertanian' },
-          { id: 'brownis', label: 'Inovasi Produk', icon: <Heart className="w-5 h-5" />, path: '/potensi/InovasiProduk' },
-          { id: 'proker', label: 'Hasil Proker Kami', icon: <Users className="w-5 h-5" />, path: '/potensi/HasilProkerKami' }
-        ].map((tab) => {
-          const isActive = activeTab === tab.id;
-          return (
-            <Link
-              key={tab.id}
-              to={tab.path}
-              className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 transform ${
-                isActive
-                  ? 'bg-green-600 text-white shadow-lg scale-105'
-                  : 'bg-white text-green-600 hover:bg-green-50 shadow-md'
-              }`}
-              // onClick sengaja tidak ada agar tidak mengubah state saat navigasi
-              // State 'activeTab' akan dikelola oleh halaman masing-masing
-            >
-              {tab.icon}
-              {tab.label}
-            </Link>
-          );
-        })}
+      <div className="grid grid-cols-2 gap-4">
+        {stats.map((stat, index) => (
+          <div
+            key={index}
+            className="bg-gradient-to-r from-green-500 to-emerald-500 p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-center"
+          >
+            <div className="flex justify-center mb-2">
+              <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
+                {stat.icon}
+              </div>
+            </div>
+            <h4 className="text-lg font-bold text-white mb-1">{stat.value}</h4>
+            <p className="text-xs text-white/90">{stat.label}</p>
+          </div>
+        ))}
       </div>
+    </div>
+  );
+}
+
+function InovasiProdukContent() {
+  return (
+    <div className="space-y-16">
+      <ProductShowcase />
+      <ProcessTimeline />
+      <InteractiveGallery />
+      <StatisticsSection />
+    </div>
+  );
+}
+
+function InovasiProduk() {
+  const [activeTab, setActiveTab] = useState('brownis');
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
+      <Navbar />
       
-      {/* Konten Halaman */}
-      <InovasiProdukContent />
+      <div className="bg-white shadow-lg">
+        <div className="max-w-6xl mx-auto mt-16 px-6 py-8">
+          <h1 className="text-4xl text-center font-bold text-green-800 mb-4">
+            Inovasi Produk Unggulan
+          </h1>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto text-center">
+            Menghadirkan inovasi brownies singkong coklat premium yang memadukan kearifan lokal dengan cita rasa modern untuk kemajuan ekonomi desa.
+          </p>
+        </div>
+      </div>
 
-    </main>
+      <main className="max-w-6xl mx-auto px-6 py-8">
+        <div className="flex flex-wrap justify-center gap-4 mb-10">
+          {[
+            { id: 'pertanian', label: 'Hasil Tani Unggulan', icon: <Leaf className="w-5 h-5" />, path: '/potensi/pertanian' },
+            { id: 'brownis', label: 'Inovasi Produk', icon: <Heart className="w-5 h-5" />, path: '/potensi/InovasiProduk' },
+            { id: 'proker', label: 'Hasil Proker Kami', icon: <Users className="w-5 h-5" />, path: '/potensi/HasilProkerKami' }
+          ].map((tab) => {
+            const isActive = activeTab === tab.id;
+            return (
+              <Link
+                key={tab.id}
+                to={tab.path}
+                className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 transform ${
+                  isActive
+                    ? 'bg-green-600 text-white shadow-lg scale-105'
+                    : 'bg-white text-green-600 hover:bg-green-50 shadow-md'
+                }`}
+              >
+                {tab.icon}
+                {tab.label}
+              </Link>
+            );
+          })}
+        </div>
+        
+        <InovasiProdukContent />
+      </main>
 
-    <Footer />
-  </div>
-);
+      <Footer />
+    </div>
+  );
 }
 
 export default InovasiProduk;
