@@ -63,134 +63,150 @@ function HasilProkerContent({ openModal }) {
       </div>
 
       {/* Program Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Card: Video Company Profile */}
-        <div className="group bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100/50">
-          <div className="relative h-48 overflow-hidden rounded-t-xl">
-            <img src="/images/pasha.jpg" alt="Video Profil Desa" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="absolute top-3 left-3 bg-green-500/90 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" /></svg>
-              Video
-            </div>
-          </div>
-          <div className="p-5 flex flex-col">
-            <h3 className="text-lg font-semibold text-green-800 mb-2">Video Profil Desa</h3>
-            <p className="text-gray-600 text-sm mb-4 flex-grow">
-              Dokumentasi visual lengkap tentang potensi, inovasi produk, dan kehidupan masyarakat Desa Mlokomanis Wetan.
-            </p>
-            <button 
-              onClick={() => window.open('https://youtu.be/HLJQLt98dOQ?si=RDysefjhviWgCeg9', '_blank')}
-              className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-gradient-to-r hover:from-blue-600 hover:to-indigo-600 transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg"
-            >
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" /></svg>
-              Tonton Video
-              <ExternalLink className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
-
-        {/* Masterplan */}
-        <div className="group bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100/50">
-          <div className="relative h-48 overflow-hidden rounded-t-xl">
-            <img src="/images/masterplan.jpg" alt="Buku Masterplan" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="absolute top-3 left-3 bg-amber-500/90 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm0 2a10 10 0 100-20 10 10 0 000 20z" clipRule="evenodd" />
-              </svg>
-              Dokumen
-            </div>
-          </div>
-          <div className="p-5 flex flex-col">
-            <h3 className="text-lg font-semibold text-green-800 mb-2">Buku Masterplan</h3>
-            <p className="text-gray-600 text-sm mb-4 flex-grow">
-              Panduan ini menjadi acuan praktis bagi petani untuk meningkatkan produktivitas dan nilai tambah hasil tani melalui teknik budidaya dan pengolahan yang tepat guna.
-            </p>
-            <button 
-              onClick={() => window.open('/dokumen/masterplan.pdf', '_blank')}
-              className="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-gradient-to-r hover:from-amber-600 hover:to-orange-600 transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg"
-            >
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm0 2a10 10 0 100-20 10 10 0 000 20z" clipRule="evenodd" />
-              </svg>
-              Lihat Dokumen
-            </button>
-          </div>
-        </div>
-
-        {/* Kays */}
-        <div className="group bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100/50">
-          <div className="relative h-48 overflow-hidden rounded-t-xl">
-            <img src="/images/pertanian.jpg" alt="Pertanian Sebagai Bidang Ilmu" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="absolute top-3 left-3 bg-green-500/90 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm0 2a10 10 0 100-20 10 10 0 000 20z" clipRule="evenodd" />
-              </svg>
-              Publikasi
-            </div>
-          </div>
-          <div className="p-5 flex flex-col">
-            <h3 className="text-lg font-semibold text-green-800 mb-2">Pertanian Sebagai Bidang Ilmu Serta Profesi yang Memiliki Nilai Luhur</h3>
-            <p className="text-gray-600 text-sm mb-4 flex-grow">
-              Pertanian adalah profesi bernilai luhur yang menopang ekonomi, melestarikan alam, menjaga budaya, dan membuka peluang inovasi hingga pasar global.
-            </p>
-            <button 
-              onClick={() => window.open('/dokumen/kays.pdf', '_blank')}
-              className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-gradient-to-r hover:from-green-600 hover:to-green-700 transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg"
-            >
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm0 2a10 10 0 100-20 10 10 0 000 20z" clipRule="evenodd" />
-              </svg>
-              Lihat Dokumen
-            </button>
-          </div>
-        </div>
-
-        {/* Imam */}
-        <div className="group bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100/50">
-          <div className="relative h-48 overflow-hidden rounded-t-xl">
-            <img src="/images/imam.png" alt="Folklor Pertanian" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="absolute top-3 left-3 bg-amber-500/90 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm0 2a10 10 0 100-20 10 10 0 000 20z" clipRule="evenodd" />
-              </svg>
-              E-Book
-            </div>
-          </div>
-          <div className="p-5 flex flex-col">
-            <h3 className="text-lg font-semibold text-green-800 mb-2">Folklor Pertanian Desa Mlokomanis Wetan</h3>
-            <p className="text-gray-600 text-sm mb-4 flex-grow">
-              Tentang cerita, kepercayaan, dan tradisi khususnya di pertanian yang diwariskan secara turun temurun lewat lisan
-            </p>
-            <button 
-              onClick={() => window.open('/dokumen/imam.pdf', '_blank')}
-              className="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-gradient-to-r hover:from-amber-600 hover:to-orange-600 transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg"
-            >
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm0 2a10 10 0 100-20 10 10 0 000 20z" clipRule="evenodd" />
-              </svg>
-              Lihat Dokumen
-            </button>
-          </div>
-        </div>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+  {/* Card: Video Company Profile */}
+  <div className="group bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100/50 flex flex-col h-full">
+    <div className="relative h-48 overflow-hidden rounded-t-xl">
+      <img src="/images/pasha.jpg" alt="Video Profil Desa" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      <div className="absolute top-3 left-3 bg-green-500/90 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
+        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" /></svg>
+        Video
       </div>
+    </div>
+    <div className="p-5 flex flex-col flex-grow">
+      <h3 className="text-lg font-semibold text-green-800 mb-2">Video Profil Desa</h3>
+      <p className="text-gray-600 text-sm mb-3 flex-grow">
+        Dokumentasi visual lengkap tentang potensi, inovasi produk, dan kehidupan masyarakat Desa Mlokomanis Wetan.
+      </p>
+      <p className="text-xs text-gray-500 mb-4">
+        Dibuat oleh: <span className="font-medium text-gray-700">Rayhan Pasha Rizkal Rahayaan</span>
+      </p>
+      <button 
+        onClick={() => window.open('https://youtu.be/HLJQLt98dOQ?si=RDysefjhviWgCeg9', '_blank')}
+        className="mt-auto w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-gradient-to-r hover:from-amber-600 hover:to-orange-600 transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg"
+      >
+        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+        </svg>
+        Tonton Video
+        
+      </button>
+    </div>
+  </div>
+
+  {/* Card: Masterplan */}
+  <div className="group bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100/50 flex flex-col h-full">
+    <div className="relative h-48 overflow-hidden rounded-t-xl">
+      <img src="/images/masterplan.jpg" alt="Buku Masterplan" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      <div className="absolute top-3 left-3 bg-amber-500/90 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
+        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
+        </svg>
+        E-Book
+      </div>
+    </div>
+    <div className="p-5 flex flex-col flex-grow">
+      <h3 className="text-lg font-semibold text-green-800 mb-2">Buku Masterplan</h3>
+      <p className="text-gray-600 text-sm mb-3 flex-grow">
+        Panduan ini menjadi acuan praktis bagi petani untuk meningkatkan produktivitas dan nilai tambah hasil tani melalui teknik budidaya dan pengolahan yang tepat guna.
+      </p>
+      <p className="text-xs text-gray-500 mb-4">
+        Dibuat oleh: <span className="font-medium text-gray-700">Nonik Kusuma Wardhani</span>
+      </p>
+      <button 
+        onClick={() => window.open('/dokumen/masterplan.pdf', '_blank')}
+        className="mt-auto w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-gradient-to-r hover:from-amber-600 hover:to-orange-600 transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg"
+      >
+        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
+        </svg>
+        Lihat Dokumen
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  {/* Card: Kays */}
+  <div className="group bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100/50 flex flex-col h-full">
+    <div className="relative h-48 overflow-hidden rounded-t-xl">
+      <img src="/images/pertanian.jpg" alt="Pertanian Sebagai Bidang Ilmu" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+      <div className="absolute top-3 left-3 bg-green-500/90 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
+        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
+        </svg>
+        Artikel
+      </div>
+    </div>
+    <div className="p-5 flex flex-col flex-grow">
+      <h3 className="text-lg font-semibold text-green-800 mb-2">Pertanian Sebagai Bidang Ilmu Serta Profesi yang Memiliki Nilai Luhur</h3>
+      <p className="text-gray-600 text-sm mb-3 flex-grow">
+        Pertanian adalah profesi bernilai luhur yang menopang ekonomi, melestarikan alam, menjaga budaya, dan membuka peluang inovasi hingga pasar global.
+      </p>
+      <p className="text-xs text-gray-500 mb-4">
+        Dibuat oleh: <span className="font-medium text-gray-700">Abdillah Kays</span>
+      </p>
+      <button 
+        onClick={() => window.open('/dokumen/kays.pdf', '_blank')}
+        className="mt-auto w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-gradient-to-r hover:from-amber-600 hover:to-orange-600 transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg"
+      >
+        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
+        </svg>
+        Lihat Dokumen
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  {/* Card: Imam */}
+  <div className="group bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100/50 flex flex-col h-full">
+    <div className="relative h-48 overflow-hidden rounded-t-xl">
+      <img src="/images/imam.png" alt="Folklor Pertanian" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+      <div className="absolute top-3 left-3 bg-amber-500/90 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
+        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
+        </svg>
+        Folklor
+      </div>
+    </div>
+    <div className="p-5 flex flex-col flex-grow">
+      <h3 className="text-lg font-semibold text-green-800 mb-2">Folklor Pertanian Desa Mlokomanis Wetan</h3>
+      <p className="text-gray-600 text-sm mb-3 flex-grow">
+        Tentang cerita, kepercayaan, dan tradisi khususnya di pertanian yang diwariskan secara turun temurun lewat lisan
+      </p>
+      <p className="text-xs text-gray-500 mb-4">
+        Dibuat oleh: <span className="font-medium text-gray-700">Imam Choiridho </span>
+      </p>
+      <button 
+        onClick={() => window.open('/dokumen/imam.pdf', '_blank')}
+        className="mt-auto w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-gradient-to-r hover:from-amber-600 hover:to-orange-600 transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg"
+      >
+        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
+        </svg>
+        Lihat Dokumen
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
 
       
             {/* Section: Peta & Dokumentasi Visual */}
       <div className="space-y-12">
         <div className="text-center">
-          <h2 className="t7uyext-3xl font-bold text-green-800 mb-4">🗺 Dokumentasi Visual & Peta Tematik</h2>
+          <h2 className="text-2xl font-bold text-green-800 mb-4">🗺 Peta Interaktif Desa Mlokomanis Wetan </h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-            Kumpulan peta tematik dan infografis yang menggambarkan potensi pertanian serta perkembangan infrastruktur di Desa Mlokomanis Wetan.
+            Menyajikan data visual tentang pertanian dan infrastruktur Desa Mlokomanis Wetan.
           </p>
         </div>
 
@@ -217,9 +233,14 @@ function HasilProkerContent({ openModal }) {
             </div>
             <div className="p-5">
               <h3 className="text-lg font-semibold text-green-800 mb-2">Pemetaan Data UMKM</h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 text-sm mb-3">
                 Pemetaan petani singkong dan kakao digunakan sebagai basis data untuk mendukung pembentukan UMKM brownies yang dikelola oleh ibu-ibu PKK
               </p>
+              <div className=" pt-14">
+                <p className="text-xs text-gray-500">
+                  Dibuat oleh: <span className="font-semibold text-gray-700">Ratu Ayesha Zahra</span>
+                </p>
+              </div>
             </div>
           </div>
 
@@ -247,6 +268,11 @@ function HasilProkerContent({ openModal }) {
               <p className="text-gray-600 text-sm">
                 Peta Persebaran UMKM Desa Mlokomanis Wetan menampilkan lokasi berbagai usaha untuk mengenalkan potensi ekonomi desa dan mendukung pengembangan UMKM.
               </p>
+              <div className=" pt-11">
+                <p className="text-xs text-gray-500">
+                  Dibuat oleh: <span className="font-semibold text-gray-700">Tesa Livia Sinaga </span>
+                </p>
+              </div>
             </div>
           </div>
 
@@ -270,54 +296,89 @@ function HasilProkerContent({ openModal }) {
               </div>
             </div>
             <div className="p-5">
-              <h3 className="text-lg font-semibold text-green-800 mb-2">Peta Tematik Tesa dan Ayesha</h3>
+              <h3 className="text-lg font-semibold text-green-800 mb-2">Peta persebaran komoditas petani dan potensi Desa Mlokomanis Wetan</h3>
               <p className="text-gray-600 text-sm">
-                Peta persebaran komoditas petani dan potensi desa Mlokomanis Wetan, memetakan persebaran petani dan komoditas dalam hal pertanian untuk mengetahui potensi yang ada di desa, seperti hasil pertanian yang melimpah terutama di bagian jagung dan singkong
+              Memetakan persebaran petani dan komoditas dalam hal pertanian untuk mengetahui potensi yang ada di desa, seperti hasil pertanian yang melimpah terutama di bagian jagung dan singkong
               </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-        {/* Section: Infografis */}
-        <div className="mt-16">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-green-800 mb-4">📊 Infografis Desa</h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Data dan statistik penting yang menggambarkan perkembangan dan potensi Desa Mlokomanis Wetan.
-            </p>
-          </div>
-          
-          <div className="flex justify-center">
-            <div className="group max-w-2xl bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100/50">
-              <div className="relative cursor-pointer overflow-hidden rounded-t-xl">
-                <img
-                  src="/images/pertanian.jpg"
-                  alt="Infografis Desa"
-                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-                  style={{ aspectRatio: '4/5' }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-sm font-medium">Klik untuk memperbesar</p>
-                </div>
-                <div className="absolute top-3 left-3 bg-purple-500/90 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
-                  </svg>
-                  Infografis
-                </div>
-              </div>
-              <div className="p-5">
-                <h4 className="text-lg font-semibold text-green-800 mb-2">Statistik & Data Desa</h4>
-                <p className="text-gray-600 text-sm">
-                  Infografis yang menyajikan data demografis, produksi pertanian, dan indikator pembangunan desa secara visual dan mudah dipahami.
+              <div className=" pt-6">
+                <p className="text-xs text-gray-500">
+                  Dibuat oleh: <span className="font-semibold text-gray-700">Ratu Ayesha Zahra & Tesa Livia Sinaga </span>
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+        {/* Section: Infografis */}
+<div className="mt-16">
+  <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8 border border-green-100">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      
+      {/* Left Side - Content */}
+      <div className="order-2 lg:order-1">
+        <div className="mb-6">
+          <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+            </svg>
+            Data & Statistik
+          </div>
+          
+          <h3 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4 leading-tight">
+            Potensi Pertanian Lokal
+            <span className="block text-green-600">Desa Mlokomanis Wetan</span>
+          </h3>
+          
+          <p className="text-gray-600 text-lg leading-relaxed mb-6">
+            Infografis komprehensif yang menyajikan data demografis, produksi pertanian, dan indikator pembangunan desa secara visual dan mudah dipahami untuk mendukung pengembangan potensi lokal.
+          </p>
+        </div>
+
+        {/* Key Stats */}
+        <div className="grid grid-cols-2 gap-4 mb-6">
+          <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-100">
+            <div className="text-2xl font-bold text-green-600 mb-1">600 Ha</div>
+            <div className="text-sm text-gray-600">Lahan Pertanian</div>
+          </div>
+          <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-100">
+            <div className="text-2xl font-bold text-blue-600 mb-1">850+</div>
+            <div className="text-sm text-gray-600">Petani Aktif</div>
+          </div>
+          <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-100">
+            <div className="text-2xl font-bold text-amber-600 mb-1">70%</div>
+            <div className="text-sm text-gray-600">Sektor Pertanian</div>
+          </div>
+          <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-100">
+            <div className="text-2xl font-bold text-purple-600 mb-1">10+</div>
+            <div className="text-sm text-gray-600">Komoditas Utama</div>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-200 pt-4">
+          <p className="text-xs text-gray-500">
+            Dibuat oleh: <span className="font-semibold text-gray-700">Gabby Novelita Malik</span>
+          </p>
+        </div>
+      </div>
+
+      {/* Right Side - Image */}
+      <div className="order-1 lg:order-2">
+        <div className="group relative">
+          
+          
+            <img
+              src="/images/gaby.png"
+              alt="Infografis Potensi Pertanian Desa Mlokomanis Wetan"
+              
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
    
   );
 }
