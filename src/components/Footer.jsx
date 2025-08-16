@@ -11,7 +11,7 @@ function Footer() {
           {/* Kolom 1: Tentang Desa */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <img src="/logo-desa.png" alt="Logo Desa" className="h-9 w-9" />
+              <img src="/images/logo.png" alt="Logo Desa" className="h-9 w-9" />
               <span className="text-xl font-bold">Mlokomanis Wetan</span>
             </div>
             <p className="text-green-200 text-sm leading-relaxed">
