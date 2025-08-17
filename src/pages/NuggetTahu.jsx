@@ -24,7 +24,7 @@ function ProductShowcase() {
           </h2>
           
           <p className="text-xl text-gray-600 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Kandungan gizinya cukup tinggi, harga terjangkau, mudah untuk dibuat, disukai berbagai kalangan usia, dan camilan sehat yang kaya akan protein dan serat yang bermanfaat bagi kesehatan.
           </p>
 
           {/* Features Grid */}
@@ -124,11 +124,62 @@ function ProcessTimeline() {
   const [activeStep, setActiveStep] = useState(0);
   
   const steps = [
-    { title: "Terbuat Dari Ampas Tahu Dengan Kandung Gizi yang Tinggi", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", details: ["Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amett", "Lorem ipsum dolor sit amet"], icon: <Leaf className="w-8 h-8" />, color: "from-green-500 to-emerald-600", image: "https://images.unsplash.com/photo-1582169296801-56e4eaa3d9cc?w=400&h=300&fit=crop" },
-    { title: "Prosos Pembuatan Yang Sudah Sesuai SOP Dan higenis", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", details: ["Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amett", "Lorem ipsum dolor sit amet"], icon: <ChefHat className="w-8 h-8" />, color: "from-blue-500 to-cyan-600", image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop" },
-    { title: "Berbagai Rasa dan Juga kaya Akan Gizi", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", details: ["Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amett", "Lorem ipsum dolor sit amet"], icon: <Heart className="w-8 h-8" />, color: "from-amber-500 to-orange-600", image: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=400&h=300&fit=crop" },
-    { title: "Packaging & Quality Check",description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", details: ["Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amett", "Lorem ipsum dolor sit amet"], icon: <Package className="w-8 h-8" />, color: "from-gray-500 to-gray-600", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" }
-  ];
+  { 
+    title: "Packaging - Visualisasi Logo “Naghu Bites”", 
+    description: 
+      "Dalam upaya memperkuat citra dan daya tarik Naghu Bites, setiap elemen kemasan dirancang tidak hanya untuk melindungi produk, tetapi juga menyampaikan makna di baliknya. Konsep visual menggabungkan unsur budaya lokal, kearifan pangan Indonesia, serta nilai keberlanjutan lingkungan. Setiap komponen memiliki makna simbolis yang merepresentasikan identitas Naghu Bites.", 
+    details: [
+      "Tampah (Bingkai Anyaman): digunakan untuk menaruh hasil cetakan nugget ampas tahu sebelum dikukus, mengangkat identitas budaya lokal, serta mencerminkan nilai sustainable dan eco friendly",
+      "Daun Pisang: digunakan sebagai alas mengukus nugget ampas tahu, melambangkan local wisdom serta makanan ramah lingkungan dan alami",
+      "Visual Nugget: simbol identitas visual yang merepresentasikan bahan utama produk nugget ampas tahu"
+    ], 
+    icon: <Leaf className="w-8 h-8" />, 
+    color: "from-green-500 to-emerald-600", 
+    image: "https://images.unsplash.com/photo-1582169296801-56e4eaa3d9cc?w=400&h=300&fit=crop" 
+  },
+  { 
+    title: "Copywriting Logo “Naghu Bites”", 
+    description: 
+      "Identitas merek Naghu Bites dibangun melalui pemilihan kata dan pesan yang mampu menggugah rasa penasaran sekaligus menegaskan karakter produknya. Setiap elemen copywriting pada logo menyampaikan makna yang jelas, ringkas, dan menarik, sekaligus menonjolkan keunggulan produk.", 
+    details: [
+      "“Naghu Bites”: Naghu artinya nugget tahu, Bites menggambarkan produk praktis dan renyah",
+      "Tagline: “From Soy to Joy”, singkat, padat, mencerminkan identitas produk",
+      "Keterangan: “Homemade, Healthy, Local Product” menegaskan kualitas dan keunggulan"
+    ], 
+    icon: <ChefHat className="w-8 h-8" />, 
+    color: "from-blue-500 to-cyan-600", 
+    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop" 
+  },
+  { 
+    title: "Label Kemasan “Naghu Bites”", 
+    description: 
+      "Label kemasan Naghu Bites berfungsi sebagai media informasi yang memudahkan konsumen mengenal produk secara menyeluruh. Setiap detail label memperkuat identitas, menjelaskan komposisi, variasi, hingga keamanan konsumsi.", 
+    details: [
+      "Logo: memperkuat brand awareness dan identitas visual",
+      "Komposisi: bahan utama yaitu ampas tahu beserta bahan tambahan",
+      "Variasi: terdapat pilihan rasa wortel dan ayam dengan checklist",
+      "Netto: keterangan berat bersih, misalnya 250gr, 300gr, 1kg",
+      "More Information: QR code berisi latar belakang produk",
+      "Expired Date: panduan batas aman konsumsi"
+    ], 
+    icon: <Package className="w-8 h-8" />, 
+    color: "from-amber-500 to-orange-600", 
+    image: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=400&h=300&fit=crop" 
+  },
+  { 
+    title: "Kemasan “Naghu Bites”", 
+    description: 
+      "Pemilihan kemasan Naghu Bites mengutamakan estetika, fungsionalitas, dan dampak lingkungan. Menggunakan bahan thinwall yang dapat digunakan kembali, mudah didaur ulang, serta menjaga kualitas nugget ampas tahu di dalamnya.", 
+    details: [
+      "Thinwall: lebih ramah lingkungan dibanding plastik tebal sekali pakai",
+      "Ringan, praktis, dan tetap menjaga kualitas produk",
+      "Mendukung pengurangan sampah plastik dan gaya hidup berkelanjutan"
+    ], 
+    icon: <Award className="w-8 h-8" />, 
+    color: "from-gray-500 to-gray-600", 
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" 
+  }
+];
 
   useEffect(() => {
     const interval = setInterval(() => {

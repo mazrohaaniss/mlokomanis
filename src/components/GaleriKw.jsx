@@ -13,7 +13,7 @@ const GaleriKegiatanSection = () => {
 
   return (
     <section className="py-20 bg-[#f0fdf4]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 mt-20">
         {/* Judul */}
         <h2 className="text-4xl sm:text-4xl font-bold text-green-800 text-center mb-4">
           Galeri Kegiatan Kami

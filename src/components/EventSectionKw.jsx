@@ -2,7 +2,6 @@ import React from 'react';
 
 const posterImages = [
   '/images/acara/1.png',
-  '/images/acara/2.png',
   '/images/acara/3.png',
   '/images/acara/4.png',
   '/images/acara/5.png'
@@ -10,24 +9,32 @@ const posterImages = [
 
 const PosterSection = () => {
   return (
-    <section className="py-20" style={{ backgroundColor: '#f0fdf4' }}>
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-green-800 mb-10 text-center">
+    <section
+      className="py-12 sm:py-16 md:py-20 lg:py-24"
+      style={{ backgroundColor: '#f0fdf4' }}
+    >
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-green-800 mb-8 sm:mb-10 lg:mb-12 text-center max-w-4xl mx-auto">
           Hubungi Kami Untuk
         </h2>
 
-        {/* Horizontal scroll section */}
-        <div className="flex space-x-6 overflow-x-auto overflow-y-hidden scroll-smooth no-scrollbar">
+        {/* Responsive Grid */}
+        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-6 md:gap-8 justify-items-center">
           {posterImages.map((src, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-[22rem] h-[32rem] rounded-2xl overflow-hidden shadow-xl bg-white transition-transform duration-500 hover:scale-105"
+              className="group w-full max-w-xs sm:max-w-sm md:max-w-md rounded-xl overflow-hidden shadow-lg bg-white transition-all duration-300 hover:shadow-2xl hover:scale-[1.03]"
             >
-              <img
-                src={src}
-                alt={`Poster ${index + 1}`}
-                className="w-full h-full object-cover"
-              />
+              {/* Gunakan aspect ratio biar proporsional */}
+              <div className="aspect-[3/4] w-full overflow-hidden">
+                <img
+                  src={src}
+                  alt={`Poster ${index + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                />
+              </div>
+
             </div>
           ))}
         </div>

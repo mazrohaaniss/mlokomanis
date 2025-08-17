@@ -20,26 +20,27 @@ function HasilProkerContent() {
       <div className="text-center">
         <h2 className="text-3xl font-bold text-green-800 mb-2">Video Pengenalan Beberapa Pabrik </h2>
         <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-          Program kerja unggulan yang telah kami laksanakan untuk mengembangkan potensi pertanian dan ekonomi desa.
+          Program kerja unggulan yang telah kami laksanakan untuk mengembangkan potensi pabrik tahu dan ekonomi desa.
         </p>
       </div>
 
       <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
         {/* Konten Video */}
         <div className="p-6 text-center max-w-4xl mx-auto">
-          <h3 className="text-2xl font-bold text-green-800 mb-4">Lorem Ipsum </h3>
-          <p className="text-gray-600 mb-6">
+          <h3 className="text-2xl font-bold text-green-800 mb-4">Video Pengenalan Pabrik </h3>
+          <p className="text-gray-600 mb-6">  
             Dokumentasi visual lengkap tentang potensi, inovasi produk, dan kehidupan masyarakat Desa Mlokomanis Wetan.
           </p>
           <div className="relative w-full pt-[56.25%]">
-            <iframe
-              className="absolute top-0 left-0 w-full h-full rounded-xl shadow-xl"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="Video Profil Desa"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+          <iframe
+            className="absolute top-0 left-0 w-full h-full rounded-xl shadow-xl"
+            src="https://www.youtube.com/embed/sdc3EKCYUaQ?si=T44ejYqazKOTxQjl"
+            title="Video Profil Desa"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
           </div>
         </div>
       </div>
@@ -61,7 +62,7 @@ function  VideoPengenalan() {
           <div className="text-center">
             <h1 className="text-4xl font-bold text-green-800 mb-4">Video Potensi Pabrik Desa Mlokomanis Wetan</h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+              Pengembangan potensi pabrik tahu sekaligus mendorong pertumbuhan ekonomi desa, sehingga mampu meningkatkan daya saing produk lokal dan kesejahteraan masyarakat.
             </p>
           </div>
         </div>

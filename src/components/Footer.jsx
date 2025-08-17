@@ -11,7 +11,7 @@ function Footer() {
           {/* Kolom 1: Tentang Desa */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <img src="/logo-desa.png" alt="Logo Desa" className="h-9 w-9" />
+              <img src="/images/logoDesa.png" alt="Logo Desa" className="h-9 w-9" />
               <span className="text-xl font-bold">Mlokomanis Wetan</span>
             </div>
             <p className="text-green-200 text-sm leading-relaxed">
@@ -53,13 +53,10 @@ function Footer() {
           <div>
              <h4 className="text-lg font-semibold mb-4 text-white">Ikuti Kami</h4>
              <div className="flex space-x-4">
-                <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white hover:text-green-800 transition-colors">
-                    <Facebook size={20} />
-                </a>
-                <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white hover:text-green-800 transition-colors">
+                <a href="https://www.instagram.com/mlokomaniswetan/" className="p-2 bg-white/10 rounded-full hover:bg-white hover:text-green-800 transition-colors">
                     <Instagram size={20} />
                 </a>
-                <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white hover:text-green-800 transition-colors">
+                <a href="https://www.youtube.com/@DesaMlokomanisWetan" className="p-2 bg-white/10 rounded-full hover:bg-white hover:text-green-800 transition-colors">
                     <Youtube size={20} />
                 </a>
              </div>

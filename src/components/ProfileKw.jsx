@@ -7,11 +7,12 @@ const TentangKamiSection = () => {
         
         {/* Kolom teks */}
         <div className="text-center md:text-left">
-          <h2 className="text-4xl font-bold text-green-800 mb-6">Tentang Kami</h2>
+          <h2 className="text-3xl font-bold text-green-800 mb-6">Tentang Kami</h2>
           <p className="text-gray-800 text-lg leading-relaxed mb-4">
             Paguyuban Karawitan Mulyo Laras adalah wadah pelestarian seni tradisional Jawa,
             khususnya gamelan dan karawitan, yang beranggotakan warga dari berbagai kalangan dan generasi.
-            Kami rutin mengadakan latihan dan pentas seni sebagai upaya menjaga warisan budaya leluhur
+            Bertempat di Dusun Duwet, Desa Mlokomanis Wetan, Kecamatan Ngadirojo, Kabupaten Wonogiri,
+            rutin mengadakan latihan dan pentas seni sebagai upaya menjaga warisan budaya leluhur
             agar tetap hidup dan dikenal oleh generasi muda.
           </p>
           <p className="text-gray-800 text-lg leading-relaxed">

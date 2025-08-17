@@ -82,7 +82,7 @@ function LandingPage() {
                   Nama desa ini diambil berdasarkan adat istiadat, yaitu berada di bagian timur (wetan) dari desa induknya. Dengan topografi dataran rendah yang subur, desa ini memiliki potensi pertanian yang kaya.
                 </p>
                 <p>
-                  Sejak awal berdirinya hingga kini di bawah kepemimpinan Suwanjo, desa ini terus berkembang, terutama dalam bidang infrastruktur dan tata kelola pemerintahan yang partisipatif.
+                  Sejak awal berdirinya hingga kini di bawah kepemimpinan Suwarno, desa ini terus berkembang, terutama dalam bidang infrastruktur dan tata kelola pemerintahan yang partisipatif.
                 </p>
               </div>
             </div>
