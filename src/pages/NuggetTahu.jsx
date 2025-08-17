@@ -93,12 +93,13 @@ function ProductShowcase() {
           <div className="relative bg-gradient-to-br from-amber-400 to-orange-400 rounded-3xl p-8 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
             <div className="bg-white rounded-2xl p-6 shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1587668178277-295251f432ce?w=500&h=400&fit=crop"
-                alt="Brownies Singkong Premium"
+                src="/images/pabriktahu/nugget1.jpeg" 
+                alt="nugget"
                 className="w-full h-80 object-cover rounded-xl shadow-lg"
               />
             </div>
           </div>
+
           
           <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center shadow-2xl animate-bounce">
             <span className="text-white font-black text-sm">BARU!</span>
@@ -135,7 +136,7 @@ function ProcessTimeline() {
     ], 
     icon: <Leaf className="w-8 h-8" />, 
     color: "from-green-500 to-emerald-600", 
-    image: "https://images.unsplash.com/photo-1582169296801-56e4eaa3d9cc?w=400&h=300&fit=crop" 
+    image: "/images/pabriktahu/nugget1.jpeg" 
   },
   { 
     title: "Copywriting Logo “Naghu Bites”", 
@@ -148,7 +149,7 @@ function ProcessTimeline() {
     ], 
     icon: <ChefHat className="w-8 h-8" />, 
     color: "from-blue-500 to-cyan-600", 
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop" 
+    image: "/images/pabriktahu/nugget2.jpeg" 
   },
   { 
     title: "Label Kemasan “Naghu Bites”", 
@@ -164,7 +165,7 @@ function ProcessTimeline() {
     ], 
     icon: <Package className="w-8 h-8" />, 
     color: "from-amber-500 to-orange-600", 
-    image: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=400&h=300&fit=crop" 
+    image: "/images/pabriktahu/nugget3.jpeg" 
   },
   { 
     title: "Kemasan “Naghu Bites”", 
@@ -177,7 +178,7 @@ function ProcessTimeline() {
     ], 
     icon: <Award className="w-8 h-8" />, 
     color: "from-gray-500 to-gray-600", 
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" 
+    image: "/images/pabriktahu/nugget4.jpeg" 
   }
 ];
 
@@ -275,16 +276,13 @@ function InteractiveGallery() {
     { id: 'all', label: 'Semua', icon: <Heart className="w-4 h-4" /> },
     { id: 'product', label: 'Produk', icon: <Package className="w-4 h-4" /> },
     { id: 'process', label: 'Proses', icon: <ChefHat className="w-4 h-4" /> },
-    { id: 'packaging', label: 'Kemasan', icon: <Award className="w-4 h-4" /> }
   ];
 
   const images = [
-    { src: 'https://images.unsplash.com/photo-1587668178277-295251f432ce?w=400&h=400&fit=crop', category: 'product', title: 'Brownies Singkong Premium' },
-    { src: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=400&fit=crop', category: 'product', title: 'Tekstur Lembut' },
-    { src: 'https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=400&h=400&fit=crop', category: 'process', title: 'Proses Pencampuran' },
-    { src: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=400&fit=crop', category: 'process', title: 'Tahap Pengolahan' },
-    { src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=400&fit=crop', category: 'packaging', title: 'Kemasan Premium' },
-    { src: 'https://images.unsplash.com/photo-1582169296801-56e4eaa3d9cc?w=400&h=400&fit=crop', category: 'process', title: 'Bahan Baku Singkong' }
+    { src: "/images/pabriktahu/nugget1.jpeg", category: 'product', title: 'Nugget lembut menggoda' },
+    { src: "/images/pabriktahu/nugget2.jpeg" , category: 'process', title: 'Tahap penggorengan' },
+    { src: "/images/pabriktahu/nugget3.jpeg" , category: 'process', title: 'Proses Pencetakan' },
+    { src: "/images/pabriktahu/nugget4.jpeg" , category: 'process', title: 'Tahap pengukusan' },
   ];
 
   const filteredImages = selectedCategory === 'all' 
@@ -398,7 +396,7 @@ function NuggetTahu() {
           <div className="text-center">
             <h1 className="text-4xl font-bold text-green-800 mb-4">Inovasi Produk Nugget Tahu</h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+              Melalui langkah-langkah sederhana namun konsisten, Naghu Bites bisa menarik perhatian masyarakat, meningkatkan interaksi, dan mendorong pembelian berulang, baik secara langsung maupun melalui media sosial. 
             </p>
           </div>
         </div>

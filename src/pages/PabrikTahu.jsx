@@ -13,90 +13,30 @@ function PabrikTahuContent() {
       categoryName: 'Pabrik Tahu',
       products: [
         {
-          name: 'Pabrik A',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-          image: 'https://asset.kompas.com/crops/KPQ8xViX8vvPx2wkO3ReDN8viDA=/100x67:900x600/1200x800/data/photo/2022/12/24/63a6193568e2e.jpg',
+          name: 'Usaha Tahu Bu Muji',
+          description: 'Usaha tahu Pamuji yang dimiliki oleh Bu Muji berdiri sejak tahun 1992 dan hingga kini telah bertahan selama lebih dari 33 tahun. Perjalanan ini bermula ketika Bu Muji, yang saat itu memiliki anak berusia dua tahun, beliau memutuskan untuk memulai usaha tahu secara mandiri.',
+          image:"/images/pabriktahu/bumuji.jpg ",
           detail: [
             {
-              name: 'Sejarah Pabrik A',
+              name: 'Usaha Tahu Bu Muji',
               sejarah: [
               <div style={{ maxWidth: '100%', paddingRight: '0', textAlign: 'justify' }}>
-                {'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida sem nec justo imperdiet, nec luctus nisi tincidunt. Sed tincidunt magna et ligula faucibus, ac tempus velit efficitur. Pellentesque dignissim neque ut justo accumsan, id iaculis lorem lacinia. Integer id dui porttitor, euismod elit in, fermentum mi. Duis nec luctus libero. Aenean vitae libero non nulla sollicitudin porttitor. Mauris scelerisque, ligula vel sagittis tincidunt, nisi nulla dignissim ipsum, ut rutrum felis tellus ut leo. Donec tristique justo sed risus pharetra, vel fermentum nisl lobortis.'}
+                {'Usaha tahu Pamuji yang dimiliki oleh Bu Muji berdiri sejak tahun 1992 dan hingga kini telah bertahan selama lebih dari 33 tahun. Perjalanan ini bermula ketika Bu Muji, yang saat itu memiliki anak berusia dua tahun, beliau memutuskan untuk memulai usaha tahu secara mandiri. Keputusan tersebut bukan tanpa alasan. Sejak kecil, beliau telah akrab dengan usaha tahu karena sang ibu juga seorang penjual tahu. Awalnya, sang ibu berjualan di Karanganyar, sedangkan Bu Muji mencoba peruntungannya di Baturetno. Walaupun di daerahnya terdapat banyak pengrajin tahu, Bu Muji selalu berpegang pada prinsip persaingan sehat. Ia kerap mengajak rekan sesama pelaku usaha untuk mencari rezeki dengan cara yang baik, tanpa saling menjatuhkan. Bagi beliau, kunci bertahan dalam usaha adalah menjaga kebersihan dan kualitas tahu agar rasanya tetap segar dan tidak terlalu asam. Karakter tahu buatannya pun khas bagian dalamnya lembut, sementara ketika digoreng terasa sedikit kenyal.Perjalanan panjang usaha ini tak lepas dari tantangan. Namun, berkat kegigihan dan doa, Bu Muji merasa Allah selalu memberikan kelancaran. Usaha tahu ini telah membantu mewujudkan berbagai cita-citanya, mulai dari membiayai pendidikan anak hingga menunaikan ibadah umrah (2022) dan haji (2023). Bagi Bu Muji, rezeki dari usaha tahu bukan hanya untuk keluarga, tetapi juga untuk memberdayakan masyarakat sekitar. Beberapa pekerjanya adalah keluarga, tetangga, hingga warga dari luar daerah seperti Giriwoyo. Bagi Beliau, memberi pekerjaan adalah bentuk sedekah yang bermanfaat bagi sesama.Produksi tahu dilakukan dengan proses tradisional yang tetap terjaga kualitasnya. Kedelai direndam selama 2-3 jam, lalu digiling hingga keluar sarinya. Selanjutnya, sari kedelai direbus menggunakan uap, disaring, diberi bumbu air, kemudian dicetak. Setelah dicetak, tahu bisa dibiarkan setengah hingga satu jam sebelum dipotong. Jika dibutuhkan cepat, proses pemotongan bisa dilakukan hanya lima menit setelah pencetakan, dan tahu langsung siap digoreng.Awalnya, tempat produksi tahu ini sangat kecil. Seiring berkembangnya usaha, Bu Muji memperluas bangunan agar lebih leluasa. Meski lahan terbatas, ia tetap memilih lokasi dekat rumah agar mudah mengawasi proses produksi. Hingga kini, Usaha tahu yang dimiliki Bu Muji tetap menjadi salah satu usaha tahu yang bertahan lama di Desa Mlokomanis Wetan yang menjadi sumber penghidupan bagi keluarga dan memberi manfaat bagi warga sekitar.'}
               </div>
               ]
             }
           ]
         },
         {
-          name: 'Pabrik B',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-          image: 'https://asset.kompas.com/crops/KPQ8xViX8vvPx2wkO3ReDN8viDA=/100x67:900x600/1200x800/data/photo/2022/12/24/63a6193568e2e.jpg',
+          name: 'Pabrik Tahu Pak Mulato',
+          description: 'Pak Mulato merupakan seorang pengrajin tahu asal Dusun Bakalan, lahir pada tahun 1956. Usaha tahu yang beliau jalankan saat ini bukanlah pabrik besar, melainkan industri rumahan yang telah berdiri sekitar tahun 1987.',
+          image:"/images/pabriktahu/bumulato.jpg ",
           detail: [
             {
-              name: 'Sejarah Pabrik A',
+              name: 'Pabrik Tahu Pak Mulato',
               sejarah: [
               <div style={{ maxWidth: '100%', paddingRight: '0', textAlign: 'justify' }}>
-                {'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida sem nec justo imperdiet, nec luctus nisi tincidunt. Sed tincidunt magna et ligula faucibus, ac tempus velit efficitur. Pellentesque dignissim neque ut justo accumsan, id iaculis lorem lacinia. Integer id dui porttitor, euismod elit in, fermentum mi. Duis nec luctus libero. Aenean vitae libero non nulla sollicitudin porttitor. Mauris scelerisque, ligula vel sagittis tincidunt, nisi nulla dignissim ipsum, ut rutrum felis tellus ut leo. Donec tristique justo sed risus pharetra, vel fermentum nisl lobortis.'}
-              </div>
-              ]
-            }
-          ]
-        },
-        {
-          name: 'Pabrik C',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-          image: 'https://asset.kompas.com/crops/KPQ8xViX8vvPx2wkO3ReDN8viDA=/100x67:900x600/1200x800/data/photo/2022/12/24/63a6193568e2e.jpg',
-          detail: [
-            {
-              name: 'Sejarah Pabrik A',
-              sejarah: [
-              <div style={{ maxWidth: '100%', paddingRight: '0', textAlign: 'justify' }}>
-                {'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida sem nec justo imperdiet, nec luctus nisi tincidunt. Sed tincidunt magna et ligula faucibus, ac tempus velit efficitur. Pellentesque dignissim neque ut justo accumsan, id iaculis lorem lacinia. Integer id dui porttitor, euismod elit in, fermentum mi. Duis nec luctus libero. Aenean vitae libero non nulla sollicitudin porttitor. Mauris scelerisque, ligula vel sagittis tincidunt, nisi nulla dignissim ipsum, ut rutrum felis tellus ut leo. Donec tristique justo sed risus pharetra, vel fermentum nisl lobortis.'}
-              </div>
-              ]
-            }
-          ]
-        },
-        {
-          name: 'Pabrik D',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-          image: 'https://asset.kompas.com/crops/KPQ8xViX8vvPx2wkO3ReDN8viDA=/100x67:900x600/1200x800/data/photo/2022/12/24/63a6193568e2e.jpg',
-          detail: [
-            {
-              name: 'Sejarah Pabrik A',
-              sejarah: [
-              <div style={{ maxWidth: '100%', paddingRight: '0', textAlign: 'justify' }}>
-                {'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida sem nec justo imperdiet, nec luctus nisi tincidunt. Sed tincidunt magna et ligula faucibus, ac tempus velit efficitur. Pellentesque dignissim neque ut justo accumsan, id iaculis lorem lacinia. Integer id dui porttitor, euismod elit in, fermentum mi. Duis nec luctus libero. Aenean vitae libero non nulla sollicitudin porttitor. Mauris scelerisque, ligula vel sagittis tincidunt, nisi nulla dignissim ipsum, ut rutrum felis tellus ut leo. Donec tristique justo sed risus pharetra, vel fermentum nisl lobortis.'}
-              </div>
-              ]
-            }
-          ]
-        },
-        {
-          name: 'Pabrik E',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-          image: 'https://asset.kompas.com/crops/KPQ8xViX8vvPx2wkO3ReDN8viDA=/100x67:900x600/1200x800/data/photo/2022/12/24/63a6193568e2e.jpg',
-          detail: [
-            {
-              name: 'Sejarah Pabrik A',
-              sejarah: [
-              <div style={{ maxWidth: '100%', paddingRight: '0', textAlign: 'justify' }}>
-                {'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida sem nec justo imperdiet, nec luctus nisi tincidunt. Sed tincidunt magna et ligula faucibus, ac tempus velit efficitur. Pellentesque dignissim neque ut justo accumsan, id iaculis lorem lacinia. Integer id dui porttitor, euismod elit in, fermentum mi. Duis nec luctus libero. Aenean vitae libero non nulla sollicitudin porttitor. Mauris scelerisque, ligula vel sagittis tincidunt, nisi nulla dignissim ipsum, ut rutrum felis tellus ut leo. Donec tristique justo sed risus pharetra, vel fermentum nisl lobortis.'}
-              </div>
-              ]
-            }
-          ]
-        },
-        {
-          name: 'Pabrik F',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-          image: 'https://asset.kompas.com/crops/KPQ8xViX8vvPx2wkO3ReDN8viDA=/100x67:900x600/1200x800/data/photo/2022/12/24/63a6193568e2e.jpg',
-          detail: [
-            {
-              name: 'Sejarah Pabrik A',
-              sejarah: [
-              <div style={{ maxWidth: '100%', paddingRight: '0', textAlign: 'justify' }}>
-                {'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida sem nec justo imperdiet, nec luctus nisi tincidunt. Sed tincidunt magna et ligula faucibus, ac tempus velit efficitur. Pellentesque dignissim neque ut justo accumsan, id iaculis lorem lacinia. Integer id dui porttitor, euismod elit in, fermentum mi. Duis nec luctus libero. Aenean vitae libero non nulla sollicitudin porttitor. Mauris scelerisque, ligula vel sagittis tincidunt, nisi nulla dignissim ipsum, ut rutrum felis tellus ut leo. Donec tristique justo sed risus pharetra, vel fermentum nisl lobortis.'}
+                {'Pak Mulato merupakan seorang pengrajin tahu asal Dusun Bakalan, lahir pada tahun 1956. Usaha tahu yang beliau jalankan saat ini bukanlah pabrik besar, melainkan industri rumahan yang telah berdiri sekitar tahun 1987. Usaha tersebut merupakan warisan dari orang tuanya, yang sejak dahulu memang memproduksi tahu. Setelah orang tuanya meninggal, beliau meneruskan usaha tersebut agar tetap berjalan. Pada awal berdirinya, tahu masih jarang ditemui dan bahan baku kedelai lokal mudah didapat. Kedelai dibeli di pasar atau toko, dan pada masa itu hampir seluruhnya berasal dari petani lokal. Namun demikian, sekarang, kedelai lokal semakin langka karena petani beralih menanam komoditas lain, sehingga bahan baku berganti menggunakan kedelai impor dari Amerika dengan berbagai merek seperti Ship, Pagoda, dan lainnya.Persaingan dalam usaha tahu cukup banyak, karena ada beberapa pengrajin yang memasok ke pasar yang sama, seperti Karanganyar, Ngadirojo, Pacitan, dan Giriwoyo. Meskipun demikian, setiap pengrajin memiliki pelanggan dan pasarnya masing-masing. Bagi Pak Mulato, kunci bersaing adalah menjaga kualitas dan kebersihan tahu. Walaupun cara pembuatan hampir sama antar pengrajin, beliau berusaha menghasilkan tahu yang lezat dan bersih agar pembeli tetap setia. Selama puluhan tahun menjalankan usaha ini, Pak Mulato merasakan dampak ekonomi yang naik turun. Harga bahan baku dan minyak goreng sering kali naik, sementara harga jual tahu sulit dinaikkan karena khawatir pelanggan berkurang. Kondisi tersebut membuat keuntungan tidak selalu besar, tetapi cukup untuk membantu memenuhi kebutuhan keluarga. Bagi beliau, membuat tahu bukan sekadar pekerjaan, tetapi sudah menjadi bagian dari hidup. Ada rasa senang ketika usaha berjalan lancar, meski juga ada rasa berat saat menghadapi kerugian. Dari tempat yang dulunya tanah kosong, kini berdiri rumah, gudang, dan tempat produksi tahu yang dibangun sedikit demi sedikit dari hasil jerih payahnya. Meskipun pernah menjual peralatan usaha untuk biaya keluarga, Pak Mulato tetap berusaha bangkit dan membeli perlengkapan lagi demi mempertahankan usaha yang sudah turun-temurun. Hingga kini, beliau masih aktif memproduksi tahu, menjaga tradisi keluarga sekaligus menggerakkan ekonomi lokal.'},
               </div>
               ]
             }
@@ -110,7 +50,7 @@ function PabrikTahuContent() {
           {
           name: 'Sejarah Pabrik Tempe 5758',
           description: 'Industri Tempe Kripik Kedelai dan Benguk 5758 yang dikelola oleh Ibu Tri Hartini telah berdiri sekitar 15 tahun yang lalu, dimulai ketika anak beliau masih duduk di bangku Taman Kanak-Kanak. ',
-          image: 'https://asset.kompas.com/crops/KPQ8xViX8vvPx2wkO3ReDN8viDA=/100x67:900x600/1200x800/data/photo/2022/12/24/63a6193568e2e.jpg',
+          image:"/images/pabriktahu/5758.jpeg ",
           detail: [
             {
               name: 'Sejarah Pabrik Tempe 5758',
